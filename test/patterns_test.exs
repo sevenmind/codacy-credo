@@ -7,7 +7,7 @@ defmodule Codacy.Credo.PatternsTest do
     test "when just check passed" do
       assert %{
                level: "Warning",
-               patternId: "refactor/long_quote_blocks",
+               patternId: "refactor_long_quote_blocks",
                category: "CodeStyle"
              } = Patterns.check_to_pattern({Credo.Check.Refactor.LongQuoteBlocks})
     end
@@ -15,7 +15,7 @@ defmodule Codacy.Credo.PatternsTest do
     test "when priority specified in params" do
       assert %{
                level: "Info",
-               patternId: "refactor/long_quote_blocks"
+               patternId: "refactor_long_quote_blocks"
              } =
                Patterns.check_to_pattern({Credo.Check.Refactor.LongQuoteBlocks, [priority: :low]})
     end
@@ -30,7 +30,7 @@ defmodule Codacy.Credo.PatternsTest do
         category: "CodeStyle",
         level: "Info",
         parameters: [%{default: 30, name: "max_size"}],
-        patternId: "refactor/abc_size"
+        patternId: "refactor_abc_size"
       }
 
       assert expected == Patterns.check_to_pattern({Credo.Check.Refactor.ABCSize, false})

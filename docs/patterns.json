@@ -2,25 +2,25 @@
   "version": "0.8.10",
   "patterns": [
     {
-      "patternId": "consistency/exception_names",
+      "patternId": "consistency_exception_names",
       "parameters": [],
       "level": "Warning",
       "category": "CodeStyle"
     },
     {
-      "patternId": "consistency/line_endings",
+      "patternId": "consistency_line_endings",
       "parameters": [],
       "level": "Warning",
       "category": "CodeStyle"
     },
     {
-      "patternId": "consistency/parameter_pattern_matching",
+      "patternId": "consistency_parameter_pattern_matching",
       "parameters": [],
       "level": "Warning",
       "category": "CodeStyle"
     },
     {
-      "patternId": "consistency/space_around_operators",
+      "patternId": "consistency_space_around_operators",
       "parameters": [
         {
           "name": "ignore",
@@ -33,19 +33,19 @@
       "category": "CodeStyle"
     },
     {
-      "patternId": "consistency/space_in_parentheses",
+      "patternId": "consistency_space_in_parentheses",
       "parameters": [],
       "level": "Warning",
       "category": "CodeStyle"
     },
     {
-      "patternId": "consistency/tabs_or_spaces",
+      "patternId": "consistency_tabs_or_spaces",
       "parameters": [],
       "level": "Warning",
       "category": "CodeStyle"
     },
     {
-      "patternId": "design/alias_usage",
+      "patternId": "design_alias_usage",
       "parameters": [
         {
           "name": "excluded_namespaces",
@@ -128,7 +128,7 @@
       "category": "CodeStyle"
     },
     {
-      "patternId": "design/duplicated_code",
+      "patternId": "design_duplicated_code",
       "parameters": [
         {
           "name": "mass_threshold",
@@ -147,7 +147,7 @@
       "category": "CodeStyle"
     },
     {
-      "patternId": "design/tag_todo",
+      "patternId": "design_tag_todo",
       "parameters": [
         {
           "name": "include_doc",
@@ -158,7 +158,7 @@
       "category": "CodeStyle"
     },
     {
-      "patternId": "design/tag_fixme",
+      "patternId": "design_tag_fixme",
       "parameters": [
         {
           "name": "include_doc",
@@ -169,13 +169,13 @@
       "category": "CodeStyle"
     },
     {
-      "patternId": "readability/function_names",
+      "patternId": "readability_function_names",
       "parameters": [],
       "level": "Warning",
       "category": "CodeStyle"
     },
     {
-      "patternId": "readability/large_numbers",
+      "patternId": "readability_large_numbers",
       "parameters": [
         {
           "name": "only_greater_than",
@@ -186,7 +186,7 @@
       "category": "CodeStyle"
     },
     {
-      "patternId": "readability/max_line_length",
+      "patternId": "readability_max_line_length",
       "parameters": [
         {
           "name": "max_length",
@@ -209,13 +209,13 @@
       "category": "CodeStyle"
     },
     {
-      "patternId": "readability/module_attribute_names",
+      "patternId": "readability_module_attribute_names",
       "parameters": [],
       "level": "Warning",
       "category": "CodeStyle"
     },
     {
-      "patternId": "readability/module_doc",
+      "patternId": "readability_module_doc",
       "parameters": [
         {
           "name": "ignore_names",
@@ -228,37 +228,37 @@
       "category": "CodeStyle"
     },
     {
-      "patternId": "readability/module_names",
+      "patternId": "readability_module_names",
       "parameters": [],
       "level": "Warning",
       "category": "CodeStyle"
     },
     {
-      "patternId": "readability/parentheses_on_zero_arity_defs",
+      "patternId": "readability_parentheses_on_zero_arity_defs",
       "parameters": [],
       "level": "Info",
       "category": "CodeStyle"
     },
     {
-      "patternId": "readability/parentheses_in_condition",
+      "patternId": "readability_parentheses_in_condition",
       "parameters": [],
       "level": "Warning",
       "category": "CodeStyle"
     },
     {
-      "patternId": "readability/predicate_function_names",
+      "patternId": "readability_predicate_function_names",
       "parameters": [],
       "level": "Warning",
       "category": "CodeStyle"
     },
     {
-      "patternId": "readability/prefer_implicit_try",
+      "patternId": "readability_prefer_implicit_try",
       "parameters": [],
       "level": "Info",
       "category": "CodeStyle"
     },
     {
-      "patternId": "readability/redundant_blank_lines",
+      "patternId": "readability_redundant_blank_lines",
       "parameters": [
         {
           "name": "max_blank_lines",
@@ -269,7 +269,7 @@
       "category": "CodeStyle"
     },
     {
-      "patternId": "readability/string_sigils",
+      "patternId": "readability_string_sigils",
       "parameters": [
         {
           "name": "maximum_allowed_quotes",
@@ -280,13 +280,13 @@
       "category": "CodeStyle"
     },
     {
-      "patternId": "readability/trailing_blank_line",
+      "patternId": "readability_trailing_blank_line",
       "parameters": [],
       "level": "Info",
       "category": "CodeStyle"
     },
     {
-      "patternId": "readability/trailing_white_space",
+      "patternId": "readability_trailing_white_space",
       "parameters": [
         {
           "name": "ignore_strings",
@@ -297,37 +297,37 @@
       "category": "CodeStyle"
     },
     {
-      "patternId": "readability/variable_names",
+      "patternId": "readability_variable_names",
       "parameters": [],
       "level": "Warning",
       "category": "CodeStyle"
     },
     {
-      "patternId": "readability/semicolons",
+      "patternId": "readability_semicolons",
       "parameters": [],
       "level": "Warning",
       "category": "CodeStyle"
     },
     {
-      "patternId": "readability/space_after_commas",
+      "patternId": "readability_space_after_commas",
       "parameters": [],
       "level": "Info",
       "category": "CodeStyle"
     },
     {
-      "patternId": "refactor/double_boolean_negation",
+      "patternId": "refactor_double_boolean_negation",
       "parameters": [],
       "level": "Info",
       "category": "CodeStyle"
     },
     {
-      "patternId": "refactor/cond_statements",
+      "patternId": "refactor_cond_statements",
       "parameters": [],
       "level": "Info",
       "category": "CodeStyle"
     },
     {
-      "patternId": "refactor/cyclomatic_complexity",
+      "patternId": "refactor_cyclomatic_complexity",
       "parameters": [
         {
           "name": "max_complexity",
@@ -338,7 +338,7 @@
       "category": "CodeStyle"
     },
     {
-      "patternId": "refactor/function_arity",
+      "patternId": "refactor_function_arity",
       "parameters": [
         {
           "name": "max_arity",
@@ -353,7 +353,7 @@
       "category": "CodeStyle"
     },
     {
-      "patternId": "refactor/long_quote_blocks",
+      "patternId": "refactor_long_quote_blocks",
       "parameters": [
         {
           "name": "max_line_count",
@@ -364,25 +364,25 @@
       "category": "CodeStyle"
     },
     {
-      "patternId": "refactor/match_in_condition",
+      "patternId": "refactor_match_in_condition",
       "parameters": [],
       "level": "Info",
       "category": "CodeStyle"
     },
     {
-      "patternId": "refactor/negated_conditions_in_unless",
+      "patternId": "refactor_negated_conditions_in_unless",
       "parameters": [],
       "level": "Warning",
       "category": "CodeStyle"
     },
     {
-      "patternId": "refactor/negated_conditions_with_else",
+      "patternId": "refactor_negated_conditions_with_else",
       "parameters": [],
       "level": "Warning",
       "category": "CodeStyle"
     },
     {
-      "patternId": "refactor/nesting",
+      "patternId": "refactor_nesting",
       "parameters": [
         {
           "name": "max_nesting",
@@ -393,7 +393,7 @@
       "category": "CodeStyle"
     },
     {
-      "patternId": "refactor/pipe_chain_start",
+      "patternId": "refactor_pipe_chain_start",
       "parameters": [
         {
           "name": "excluded_functions",
@@ -404,37 +404,37 @@
       "category": "CodeStyle"
     },
     {
-      "patternId": "refactor/unless_with_else",
+      "patternId": "refactor_unless_with_else",
       "parameters": [],
       "level": "Warning",
       "category": "CodeStyle"
     },
     {
-      "patternId": "warning/bool_operation_on_same_values",
+      "patternId": "warning_bool_operation_on_same_values",
       "parameters": [],
       "level": "Warning",
       "category": "ErrorProne"
     },
     {
-      "patternId": "warning/expensive_empty_enum_check",
+      "patternId": "warning_expensive_empty_enum_check",
       "parameters": [],
       "level": "Warning",
       "category": "ErrorProne"
     },
     {
-      "patternId": "warning/i_ex_pry",
+      "patternId": "warning_i_ex_pry",
       "parameters": [],
       "level": "Warning",
       "category": "ErrorProne"
     },
     {
-      "patternId": "warning/io_inspect",
+      "patternId": "warning_io_inspect",
       "parameters": [],
       "level": "Warning",
       "category": "ErrorProne"
     },
     {
-      "patternId": "warning/lazy_logging",
+      "patternId": "warning_lazy_logging",
       "parameters": [
         {
           "name": "ignore",
@@ -449,73 +449,73 @@
       "category": "ErrorProne"
     },
     {
-      "patternId": "warning/operation_on_same_values",
+      "patternId": "warning_operation_on_same_values",
       "parameters": [],
       "level": "Warning",
       "category": "ErrorProne"
     },
     {
-      "patternId": "warning/operation_with_constant_result",
+      "patternId": "warning_operation_with_constant_result",
       "parameters": [],
       "level": "Warning",
       "category": "ErrorProne"
     },
     {
-      "patternId": "warning/unused_enum_operation",
+      "patternId": "warning_unused_enum_operation",
       "parameters": [],
       "level": "Warning",
       "category": "ErrorProne"
     },
     {
-      "patternId": "warning/unused_file_operation",
+      "patternId": "warning_unused_file_operation",
       "parameters": [],
       "level": "Warning",
       "category": "ErrorProne"
     },
     {
-      "patternId": "warning/unused_keyword_operation",
+      "patternId": "warning_unused_keyword_operation",
       "parameters": [],
       "level": "Warning",
       "category": "ErrorProne"
     },
     {
-      "patternId": "warning/unused_list_operation",
+      "patternId": "warning_unused_list_operation",
       "parameters": [],
       "level": "Warning",
       "category": "ErrorProne"
     },
     {
-      "patternId": "warning/unused_path_operation",
+      "patternId": "warning_unused_path_operation",
       "parameters": [],
       "level": "Warning",
       "category": "ErrorProne"
     },
     {
-      "patternId": "warning/unused_regex_operation",
+      "patternId": "warning_unused_regex_operation",
       "parameters": [],
       "level": "Warning",
       "category": "ErrorProne"
     },
     {
-      "patternId": "warning/unused_string_operation",
+      "patternId": "warning_unused_string_operation",
       "parameters": [],
       "level": "Warning",
       "category": "ErrorProne"
     },
     {
-      "patternId": "warning/unused_tuple_operation",
+      "patternId": "warning_unused_tuple_operation",
       "parameters": [],
       "level": "Warning",
       "category": "ErrorProne"
     },
     {
-      "patternId": "warning/raise_inside_rescue",
+      "patternId": "warning_raise_inside_rescue",
       "parameters": [],
       "level": "Info",
       "category": "ErrorProne"
     },
     {
-      "patternId": "refactor/abc_size",
+      "patternId": "refactor_abc_size",
       "parameters": [
         {
           "name": "max_size",
@@ -526,55 +526,55 @@
       "category": "CodeStyle"
     },
     {
-      "patternId": "refactor/append_single_item",
+      "patternId": "refactor_append_single_item",
       "parameters": [],
       "level": "Info",
       "category": "CodeStyle"
     },
     {
-      "patternId": "refactor/variable_rebinding",
+      "patternId": "refactor_variable_rebinding",
       "parameters": [],
       "level": "Info",
       "category": "CodeStyle"
     },
     {
-      "patternId": "warning/map_get_unsafe_pass",
+      "patternId": "warning_map_get_unsafe_pass",
       "parameters": [],
       "level": "Info",
       "category": "ErrorProne"
     },
     {
-      "patternId": "consistency/multi_alias_import_require_use",
+      "patternId": "consistency_multi_alias_import_require_use",
       "parameters": [],
       "level": "Warning",
       "category": "CodeStyle"
     },
     {
-      "patternId": "readability/specs",
+      "patternId": "readability_specs",
       "parameters": [],
       "level": "Info",
       "category": "CodeStyle"
     },
     {
-      "patternId": "warning/name_redeclaration_by_assignment",
+      "patternId": "warning_name_redeclaration_by_assignment",
       "parameters": [],
       "level": "Warning",
       "category": "ErrorProne"
     },
     {
-      "patternId": "warning/name_redeclaration_by_case",
+      "patternId": "warning_name_redeclaration_by_case",
       "parameters": [],
       "level": "Warning",
       "category": "ErrorProne"
     },
     {
-      "patternId": "warning/name_redeclaration_by_def",
+      "patternId": "warning_name_redeclaration_by_def",
       "parameters": [],
       "level": "Warning",
       "category": "ErrorProne"
     },
     {
-      "patternId": "warning/name_redeclaration_by_fn",
+      "patternId": "warning_name_redeclaration_by_fn",
       "parameters": [],
       "level": "Warning",
       "category": "ErrorProne"

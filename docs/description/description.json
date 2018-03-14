@@ -1,0 +1,554 @@
+[
+  {
+    "title": "Consistency Exception Names",
+    "timeToFix": 5,
+    "patternId": "consistency_exception_names",
+    "parameters": [],
+    "description": "Exception names should end with a common suffix like \"Error\"."
+  },
+  {
+    "title": "Consistency Line Endings",
+    "timeToFix": 5,
+    "patternId": "consistency_line_endings",
+    "parameters": [],
+    "description": "Windows and *nix systems use different line-endings in files."
+  },
+  {
+    "title": "Consistency Parameter Pattern Matching",
+    "timeToFix": 5,
+    "patternId": "consistency_parameter_pattern_matching",
+    "parameters": [],
+    "description": "When capturing a parameter using pattern matching you can either put the name before or after the value i.e."
+  },
+  {
+    "title": "Consistency Space Around Operators",
+    "timeToFix": 5,
+    "patternId": "consistency_space_around_operators",
+    "parameters": [],
+    "description": "Use spaces around operators like `+`, `-`, `*` and `/`. This is the **preferred** way, although other styles are possible, as long as it is applied consistently."
+  },
+  {
+    "title": "Consistency Space In Parentheses",
+    "timeToFix": 5,
+    "patternId": "consistency_space_in_parentheses",
+    "parameters": [],
+    "description": "Don't use spaces after `(`, `[`, and `{` or before `}`, `]`, and `)`. This is the **preferred** way, although other styles are possible, as long as it is applied consistently."
+  },
+  {
+    "title": "Consistency Tabs Or Spaces",
+    "timeToFix": 5,
+    "patternId": "consistency_tabs_or_spaces",
+    "parameters": [],
+    "description": "Tabs should be used consistently."
+  },
+  {
+    "title": "Design Alias Usage",
+    "timeToFix": 5,
+    "patternId": "design_alias_usage",
+    "parameters": [
+      {
+        "name": "if_nested_deeper_than",
+        "description": "Only raise an issue if a module is nested deeper than this."
+      },
+      {
+        "name": "if_called_more_often_than",
+        "description": "Only raise an issue if a module is called more often than this."
+      }
+    ],
+    "description": "Functions from other modules should be used via an alias if the module's namespace is not top-level."
+  },
+  {
+    "title": "Design Duplicated Code",
+    "timeToFix": 5,
+    "patternId": "design_duplicated_code",
+    "parameters": [
+      {
+        "name": "mass_threshold",
+        "description": "The minimum mass which a part of code has to have to qualify for this check."
+      },
+      {
+        "name": "nodes_threshold",
+        "description": "The number of nodes that need to be found to raise an issue."
+      }
+    ],
+    "description": "Code should not be copy-pasted in a codebase when there is room to abstract the copied functionality in a meaningful way."
+  },
+  {
+    "title": "Design Tag Todo",
+    "timeToFix": 5,
+    "patternId": "design_tag_todo",
+    "parameters": [
+      {
+        "name": "include_doc",
+        "description": "Set to `true` to also include tags from @doc attributes."
+      }
+    ],
+    "description": "TODO comments are used to remind yourself of source code related things."
+  },
+  {
+    "title": "Design Tag Fixme",
+    "timeToFix": 5,
+    "patternId": "design_tag_fixme",
+    "parameters": [
+      {
+        "name": "include_doc",
+        "description": "Set to `true` to also include tags from @doc attributes."
+      }
+    ],
+    "description": "FIXME comments are used to indicate places where source code needs fixing."
+  },
+  {
+    "title": "Readability Function Names",
+    "timeToFix": 5,
+    "patternId": "readability_function_names",
+    "parameters": [],
+    "description": "Function and macro names are always written in snake_case in Elixir."
+  },
+  {
+    "title": "Readability Large Numbers",
+    "timeToFix": 5,
+    "patternId": "readability_large_numbers",
+    "parameters": [
+      {
+        "name": "only_greater_than",
+        "description": "The check only reports numbers greater than this."
+      }
+    ],
+    "description": "Numbers can contain underscores for readability purposes. These do not affect the value of the number, but can help read large numbers more easily."
+  },
+  {
+    "title": "Readability Max Line Length",
+    "timeToFix": 5,
+    "patternId": "readability_max_line_length",
+    "parameters": [
+      {
+        "name": "max_length",
+        "description": "The maximum number of characters a line may consist of."
+      },
+      {
+        "name": "ignore_definitions",
+        "description": "Set to `true` to ignore lines including function definitions."
+      },
+      {
+        "name": "ignore_specs",
+        "description": "Set to `true` to ignore lines including `@spec`s."
+      },
+      {
+        "name": "ignore_strings",
+        "description": "Set to `true` to ignore lines that are strings or in heredocs"
+      }
+    ],
+    "description": "Checks for the length of lines."
+  },
+  {
+    "title": "Readability Module Attribute Names",
+    "timeToFix": 5,
+    "patternId": "readability_module_attribute_names",
+    "parameters": [],
+    "description": "Module attribute names are always written in snake_case in Elixir."
+  },
+  {
+    "title": "Readability Module Doc",
+    "timeToFix": 5,
+    "patternId": "readability_module_doc",
+    "parameters": [
+      {
+        "name": "ignore_names",
+        "description": "All modules matching this regex (or list of regexes) will be ignored."
+      }
+    ],
+    "description": "Every module should contain comprehensive documentation."
+  },
+  {
+    "title": "Readability Module Names",
+    "timeToFix": 5,
+    "patternId": "readability_module_names",
+    "parameters": [],
+    "description": "Module names are always written in PascalCase in Elixir."
+  },
+  {
+    "title": "Readability Parentheses On Zero Arity Defs",
+    "timeToFix": 5,
+    "patternId": "readability_parentheses_on_zero_arity_defs",
+    "parameters": [],
+    "description": "Do not use parentheses when defining a function which has no arguments."
+  },
+  {
+    "title": "Readability Parentheses In Condition",
+    "timeToFix": 5,
+    "patternId": "readability_parentheses_in_condition",
+    "parameters": [],
+    "description": "Because `if` and `unless` are macros, the preferred style is to not use parentheses around conditions."
+  },
+  {
+    "title": "Readability Predicate Function Names",
+    "timeToFix": 5,
+    "patternId": "readability_predicate_function_names",
+    "parameters": [],
+    "description": "Predicate functions/macros should be named accordingly:"
+  },
+  {
+    "title": "Readability Prefer Implicit Try",
+    "timeToFix": 5,
+    "patternId": "readability_prefer_implicit_try",
+    "parameters": [],
+    "description": "Prefer using an implicit `try` rather than explicit `try` if you try to rescue anything the function does."
+  },
+  {
+    "title": "Readability Redundant Blank Lines",
+    "timeToFix": 5,
+    "patternId": "readability_redundant_blank_lines",
+    "parameters": [
+      {
+        "name": "max_blank_lines",
+        "description": "The maximum number of tolerated consecutive blank lines."
+      }
+    ],
+    "description": "Files should not have two or more consecutive blank lines."
+  },
+  {
+    "title": "Readability String Sigils",
+    "timeToFix": 5,
+    "patternId": "readability_string_sigils",
+    "parameters": [
+      {
+        "name": "maximum_allowed_quotes",
+        "description": "The maximum amount of escaped quotes you want to tolerate."
+      }
+    ],
+    "description": "If you used quoted strings that contain quotes, you might want to consider switching to the use of sigils instead."
+  },
+  {
+    "title": "Readability Trailing Blank Line",
+    "timeToFix": 5,
+    "patternId": "readability_trailing_blank_line",
+    "parameters": [],
+    "description": "Files should end in a trailing blank line."
+  },
+  {
+    "title": "Readability Trailing White Space",
+    "timeToFix": 5,
+    "patternId": "readability_trailing_white_space",
+    "parameters": [
+      {
+        "name": "ignore_strings",
+        "description": "Set to `false` to check lines that are strings or in heredocs"
+      }
+    ],
+    "description": "There should be no white-space (i.e. tabs, spaces) at the end of a line."
+  },
+  {
+    "title": "Readability Variable Names",
+    "timeToFix": 5,
+    "patternId": "readability_variable_names",
+    "parameters": [],
+    "description": "Variable names are always written in snake_case in Elixir."
+  },
+  {
+    "title": "Readability Semicolons",
+    "timeToFix": 5,
+    "patternId": "readability_semicolons",
+    "parameters": [],
+    "description": "Don't use ; to separate statements and expressions. Statements and expressions should be separated by lines."
+  },
+  {
+    "title": "Readability Space After Commas",
+    "timeToFix": 5,
+    "patternId": "readability_space_after_commas",
+    "parameters": [],
+    "description": "You can use white-space after commas to make items of lists, tuples and other enumerations easier to separate from one another."
+  },
+  {
+    "title": "Refactor Double Boolean Negation",
+    "timeToFix": 5,
+    "patternId": "refactor_double_boolean_negation",
+    "parameters": [],
+    "description": "Having double negations in your code obscures a parameters original value."
+  },
+  {
+    "title": "Refactor Cond Statements",
+    "timeToFix": 5,
+    "patternId": "refactor_cond_statements",
+    "parameters": [],
+    "description": "Each cond statement should have 3 or more statements including the \"always true\" statement. Otherwise an `if` and `else` construct might be more appropriate."
+  },
+  {
+    "title": "Refactor Cyclomatic Complexity",
+    "timeToFix": 5,
+    "patternId": "refactor_cyclomatic_complexity",
+    "parameters": [
+      {
+        "name": "max_complexity",
+        "description": "The maximum cyclomatic complexity a function should have."
+      }
+    ],
+    "description": "Cyclomatic complexity is a software complexity metric closely correlated with coding errors."
+  },
+  {
+    "title": "Refactor Function Arity",
+    "timeToFix": 5,
+    "patternId": "refactor_function_arity",
+    "parameters": [
+      {
+        "name": "max_arity",
+        "description": "The maximum number of parameters which a function should take."
+      },
+      {
+        "name": "ignore_defp",
+        "description": "Set to `true` to ignore private functions."
+      }
+    ],
+    "description": "A function can take as many parameters as needed, but even in a functional language there can be too many parameters."
+  },
+  {
+    "title": "Refactor Long Quote Blocks",
+    "timeToFix": 5,
+    "patternId": "refactor_long_quote_blocks",
+    "parameters": [
+      {
+        "name": "max_line_count",
+        "description": "The maximum number of lines a quote block should be allowed to have."
+      }
+    ],
+    "description": "Long `quote` blocks are generally an indication that too much is done inside them."
+  },
+  {
+    "title": "Refactor Match In Condition",
+    "timeToFix": 5,
+    "patternId": "refactor_match_in_condition",
+    "parameters": [],
+    "description": "Pattern matching should only ever be used for simple assignments inside `if` and `unless` clauses."
+  },
+  {
+    "title": "Refactor Negated Conditions In Unless",
+    "timeToFix": 5,
+    "patternId": "refactor_negated_conditions_in_unless",
+    "parameters": [],
+    "description": "Unless blocks should not contain a negated condition."
+  },
+  {
+    "title": "Refactor Negated Conditions With Else",
+    "timeToFix": 5,
+    "patternId": "refactor_negated_conditions_with_else",
+    "parameters": [],
+    "description": "An `if` block with a negated condition should not contain an else block."
+  },
+  {
+    "title": "Refactor Nesting",
+    "timeToFix": 5,
+    "patternId": "refactor_nesting",
+    "parameters": [
+      {
+        "name": "max_nesting",
+        "description": "The maximum number of levels code should be nested."
+      }
+    ],
+    "description": "Code should not be nested more than once inside a function."
+  },
+  {
+    "title": "Refactor Pipe Chain Start",
+    "timeToFix": 5,
+    "patternId": "refactor_pipe_chain_start",
+    "parameters": [],
+    "description": "Pipes (`|>`) can become more readable by starting with a \"raw\" value."
+  },
+  {
+    "title": "Refactor Unless With Else",
+    "timeToFix": 5,
+    "patternId": "refactor_unless_with_else",
+    "parameters": [],
+    "description": "An `unless` block should not contain an else block."
+  },
+  {
+    "title": "Warning Bool Operation On Same Values",
+    "timeToFix": 5,
+    "patternId": "warning_bool_operation_on_same_values",
+    "parameters": [],
+    "description": "Boolean operations with identical values on the left and right side are most probably a logical fallacy or a copy-and-paste error."
+  },
+  {
+    "title": "Warning Expensive Empty Enum Check",
+    "timeToFix": 5,
+    "patternId": "warning_expensive_empty_enum_check",
+    "parameters": [],
+    "description": "Checking if the size of the enum is `0` can be very expensive, since you are determining the exact count of elements."
+  },
+  {
+    "title": "Warning I Ex Pry",
+    "timeToFix": 5,
+    "patternId": "warning_i_ex_pry",
+    "parameters": [],
+    "description": "While calls to IEx.pry might appear in some parts of production code, most calls to this function are added during debugging sessions."
+  },
+  {
+    "title": "Warning Io Inspect",
+    "timeToFix": 5,
+    "patternId": "warning_io_inspect",
+    "parameters": [],
+    "description": "While calls to IO.inspect might appear in some parts of production code, most calls to this function are added during debugging sessions."
+  },
+  {
+    "title": "Warning Lazy Logging",
+    "timeToFix": 5,
+    "patternId": "warning_lazy_logging",
+    "parameters": [
+      {
+        "name": "ignore",
+        "description": "Do not raise an issue for these Logger calls."
+      }
+    ],
+    "description": "Ensures laziness of Logger calls."
+  },
+  {
+    "title": "Warning Operation On Same Values",
+    "timeToFix": 5,
+    "patternId": "warning_operation_on_same_values",
+    "parameters": [],
+    "description": "Operations on the same values always yield the same result and therefore make little sense in production code."
+  },
+  {
+    "title": "Warning Operation With Constant Result",
+    "timeToFix": 5,
+    "patternId": "warning_operation_with_constant_result",
+    "parameters": [],
+    "description": "Operations on the same values always yield the same result and therefore make little sense in production code."
+  },
+  {
+    "title": "Warning Unused Enum Operation",
+    "timeToFix": 5,
+    "patternId": "warning_unused_enum_operation",
+    "parameters": [],
+    "description": "With the exception of `Enum.each/2`, the result of a call to the Enum module's functions has to be used."
+  },
+  {
+    "title": "Warning Unused File Operation",
+    "timeToFix": 5,
+    "patternId": "warning_unused_file_operation",
+    "parameters": [],
+    "description": "The result of a call to the File module's functions has to be used."
+  },
+  {
+    "title": "Warning Unused Keyword Operation",
+    "timeToFix": 5,
+    "patternId": "warning_unused_keyword_operation",
+    "parameters": [],
+    "description": "The result of a call to the Keyword module's functions has to be used."
+  },
+  {
+    "title": "Warning Unused List Operation",
+    "timeToFix": 5,
+    "patternId": "warning_unused_list_operation",
+    "parameters": [],
+    "description": "The result of a call to the List module's functions has to be used."
+  },
+  {
+    "title": "Warning Unused Path Operation",
+    "timeToFix": 5,
+    "patternId": "warning_unused_path_operation",
+    "parameters": [],
+    "description": "The result of a call to the Path module's functions has to be used."
+  },
+  {
+    "title": "Warning Unused Regex Operation",
+    "timeToFix": 5,
+    "patternId": "warning_unused_regex_operation",
+    "parameters": [],
+    "description": "The result of a call to the Regex module's functions has to be used."
+  },
+  {
+    "title": "Warning Unused String Operation",
+    "timeToFix": 5,
+    "patternId": "warning_unused_string_operation",
+    "parameters": [],
+    "description": "The result of a call to the String module's functions has to be used."
+  },
+  {
+    "title": "Warning Unused Tuple Operation",
+    "timeToFix": 5,
+    "patternId": "warning_unused_tuple_operation",
+    "parameters": [],
+    "description": "The result of a call to the Tuple module's functions has to be used."
+  },
+  {
+    "title": "Warning Raise Inside Rescue",
+    "timeToFix": 5,
+    "patternId": "warning_raise_inside_rescue",
+    "parameters": [],
+    "description": "Using `Kernel.raise` inside of a `rescue` block creates a new stacktrace, which obscures the cause of the original error."
+  },
+  {
+    "title": "Refactor Abc Size",
+    "timeToFix": 5,
+    "patternId": "refactor_abc_size",
+    "parameters": [
+      {
+        "name": "max_size",
+        "description": "The maximum ABC size a function should have."
+      }
+    ],
+    "description": "The ABC size describes a metric based on assignments, branches and conditions."
+  },
+  {
+    "title": "Refactor Append Single Item",
+    "timeToFix": 5,
+    "patternId": "refactor_append_single_item",
+    "parameters": [],
+    "description": "When building up large lists, it is faster to prepend than append. Therefore: It is sometimes best to prepend to the list during iteration and call Enum.reverse/1 at the end, as it is quite fast."
+  },
+  {
+    "title": "Refactor Variable Rebinding",
+    "timeToFix": 5,
+    "patternId": "refactor_variable_rebinding",
+    "parameters": [],
+    "description": "You might want to refrain from rebinding variables."
+  },
+  {
+    "title": "Warning Map Get Unsafe Pass",
+    "timeToFix": 5,
+    "patternId": "warning_map_get_unsafe_pass",
+    "parameters": [],
+    "description": "`Map.get/2` can lead into runtime errors if the result is passed into a pipe without a proper default value. This happens when the next function in the pipe cannot handle `nil` values correctly."
+  },
+  {
+    "title": "Consistency Multi Alias Import Require Use",
+    "timeToFix": 5,
+    "patternId": "consistency_multi_alias_import_require_use",
+    "parameters": [],
+    "description": "When using alias, import, require or use for multiple names from the same namespace, you have two options:"
+  },
+  {
+    "title": "Readability Specs",
+    "timeToFix": 5,
+    "patternId": "readability_specs",
+    "parameters": [],
+    "description": "Functions, callbacks and macros need typespecs."
+  },
+  {
+    "title": "Warning Name Redeclaration By Assignment",
+    "timeToFix": 5,
+    "patternId": "warning_name_redeclaration_by_assignment",
+    "parameters": [],
+    "description": "The names of local variables should not be the same as names of functions or macros in the same module or in `Kernel`."
+  },
+  {
+    "title": "Warning Name Redeclaration By Case",
+    "timeToFix": 5,
+    "patternId": "warning_name_redeclaration_by_case",
+    "parameters": [],
+    "description": "Names assigned to choices in a `case` statement should not be the same as names of functions in the same module or in `Kernel`."
+  },
+  {
+    "title": "Warning Name Redeclaration By Def",
+    "timeToFix": 5,
+    "patternId": "warning_name_redeclaration_by_def",
+    "parameters": [],
+    "description": "Names assigned to parameters of a named function should not be the same as names of functions in the same module or in `Kernel`."
+  },
+  {
+    "title": "Warning Name Redeclaration By Fn",
+    "timeToFix": 5,
+    "patternId": "warning_name_redeclaration_by_fn",
+    "parameters": [],
+    "description": "Names assigned to parameters of an anonymous function should not be the same as names of functions in the same module or in `Kernel`."
+  }
+]

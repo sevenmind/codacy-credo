@@ -131,15 +131,16 @@ defmodule Codacy.Credo.Patterns do
 
   ## Example
     iex> Codacy.Credo.Patterns.check_pattern_id({Credo.Check.Refactor.LongQuoteBlocks})
-    "refactor/long_quote_blocks"
+    "refactor_long_quote_blocks"
     iex> Codacy.Credo.Patterns.check_pattern_id({Credo.Check.Refactor.LongQuoteBlocks, [option: :options]})
-    "refactor/long_quote_blocks"
+    "refactor_long_quote_blocks"
   """
   @spec check_pattern_id({atom}) :: String.t()
   def check_pattern_id({check}) do
     check
     |> Atom.to_string()
     |> String.replace_leading("Elixir.Credo.Check.", "")
+    |> String.replace(".", "")
     |> Macro.underscore()
   end
 
