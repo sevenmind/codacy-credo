@@ -21,9 +21,10 @@ defmodule CodacyCredo.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:credo, "~> 0.3"},
+      {:credo, "~> 0.8"},
       {:poison, "~> 3.1"},
-      {:mix_test_watch, "~> 0.5", only: :dev, runtime: false}
+      {:mix_test_watch, "~> 0.5", only: :dev, runtime: false},
+      {:distillery, "1.5.2", runtime: false}
     ]
   end
 end
