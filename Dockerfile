@@ -1,4 +1,4 @@
-FROM bitwalker/alpine-elixir
+FROM bitwalker/alpine-elixir:1.6.2
 ENV MIX_ENV=prod
 
 # Copy Codacy Docs

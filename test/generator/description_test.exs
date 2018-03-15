@@ -1,7 +1,7 @@
-defmodule Codacy.Credo.DescriptionTest do
-  alias Codacy.Credo.Description
+defmodule Codacy.Credo.Generator.DescriptionTest do
+  alias Codacy.Credo.Generator.Description
   use ExUnit.Case
-  doctest Codacy.Credo.Description
+  doctest Codacy.Credo.Generator.Description
 
   describe "build_check_description/1" do
     test "builds a description with patternId" do

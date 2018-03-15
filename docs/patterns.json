@@ -540,7 +540,7 @@
     {
       "patternId": "warning_map_get_unsafe_pass",
       "parameters": [],
-      "level": "Info",
+      "level": "Warning",
       "category": "ErrorProne"
     },
     {

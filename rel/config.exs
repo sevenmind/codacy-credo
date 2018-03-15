@@ -7,14 +7,13 @@ Path.join(["rel", "plugins", "*.exs"])
 |> Enum.map(&Code.eval_file(&1))
 
 use Mix.Releases.Config,
-    # This sets the default release built by `mix release`
-    default_release: :default,
-    # This sets the default environment used by `mix release`
-    default_environment: Mix.env()
+  # This sets the default release built by `mix release`
+  default_release: :default,
+  # This sets the default environment used by `mix release`
+  default_environment: Mix.env()
 
 # For a full list of config options for both releases
 # and environments, visit https://hexdocs.pm/distillery/configuration.html
-
 
 # You may define one or more environments in this file,
 # an environment's settings will override those of a release
@@ -28,15 +27,15 @@ environment :dev do
   # It is recommended that you build with MIX_ENV=prod and pass
   # the --env flag to Distillery explicitly if you want to use
   # dev mode.
-  set dev_mode: true
-  set include_erts: false
-  set cookie: :"n~biVLDX>SKcnp,IRI;X(Jo/<3T3@pTCp!ZS`D0ETRz;jH|8wIJt|ctzBp=65uBo"
+  set(dev_mode: true)
+  set(include_erts: false)
+  set(cookie: :"n~biVLDX>SKcnp,IRI;X(Jo/<3T3@pTCp!ZS`D0ETRz;jH|8wIJt|ctzBp=65uBo")
 end
 
 environment :prod do
-  set include_erts: true
-  set include_src: false
-  set cookie: :"E[UOw;u*O;{q0!;Qb%uv[G3Yb/fxuoW,HVsGAc9FKI|@zj>1N)=Ubeg5c!KMbac("
+  set(include_erts: true)
+  set(include_src: false)
+  set(cookie: :"E[UOw;u*O;{q0!;Qb%uv[G3Yb/fxuoW,HVsGAc9FKI|@zj>1N)=Ubeg5c!KMbac(")
 end
 
 # You may define one or more releases in this file.
@@ -45,9 +44,12 @@ end
 # will be used by default
 
 release :codacy_credo do
-  set version: current_version(:codacy_credo)
-  set applications: [
-    :runtime_tools
-  ]
-end
+  set(version: current_version(:codacy_credo))
 
+  set(
+    applications: [
+      :runtime_tools,
+      :credo
+    ]
+  )
+end

@@ -7,14 +7,19 @@ defmodule CodacyCredo.MixProject do
       version: "0.1.0",
       elixir: "~> 1.6",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      test_coverage: [tool: Coverex.Task],
+      deps: deps(),
+      aliases: [
+        test: "test --no-start"
+      ]
     ]
   end
 
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      extra_applications: [:logger]
+      mod: {Codacy.Credo, []},
+      extra_applications: [:logger, :crypto]
     ]
   end
 
@@ -23,8 +28,10 @@ defmodule CodacyCredo.MixProject do
     [
       {:credo, "~> 0.8"},
       {:poison, "~> 3.1"},
+      {:distillery, "1.5.2", runtime: false},
       {:mix_test_watch, "~> 0.5", only: :dev, runtime: false},
-      {:distillery, "1.5.2", runtime: false}
+      {:inch_ex, "~> 0.5.3", only: [:dev, :test]},
+      {:coverex, "~> 1.4.9", only: :test}
     ]
   end
 end

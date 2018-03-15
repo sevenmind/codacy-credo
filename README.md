@@ -7,26 +7,29 @@ Docker engine for running Elixir Credo on Codacy.
 build the docker image
 
 ```
-MIX_ENV=deploy mix deps.get
-MIX_ENV=deploy mix publish
+docker build . -t credo/codacy
 ```
 
-Regenerate docs
+Run on a project
 
 ```
-mix codacy.credo.generate $version_number
+docker run -it -v  $srcDir:/src credo/codacy
 ```
+
+Regenerate docs:
+
+```
+mix codacy.credo.generate
+```
+
+If you want to force a version of Elixir & Credo update the image version in `Dockerfile` and `mix.exs`
 
 ## Notes
 
-WILL NOT WORK WITH CUSTOM CHECKS. Codacy appears to only support predefined checks.
+This has not been tested with custom checks. They probably won't work or will have issues with Codacy.
 
-Elixir & Credo move fairly quickly. In its initial form this repo is only suited for Elixir v1.6.0, Erlang v20, Credo v0.8
+This project has only been tested with:
 
-## Requirements (Just for me)
-
-* Generate patterns.json from Credo
-* Generate DockerFile
-* Run on `/src/` within docker
-* Format Credo Output to specified format
-* Use .codacy.json on run
+* Elixir v1.6
+* Erlang v20
+* Credo v0.8

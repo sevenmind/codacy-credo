@@ -1,4 +1,4 @@
-defmodule Codacy.Credo.Patterns do
+defmodule Codacy.Credo.Generator.Patterns do
   @moduledoc """
   Builds patterns.json from checks specified in `Credo.ConfigFile`
   """
@@ -19,6 +19,17 @@ defmodule Codacy.Credo.Patterns do
   def write_patterns(patterns) do
     encoded = Poison.encode!(patterns, pretty: true)
     File.write!("./docs/patterns.json", encoded, [:binary])
+  end
+
+  @doc """
+  Utility function to get a map of pattern_ids => Check module
+  """
+  def pattern_id_map do
+    File.cwd!()
+    |> load_checks
+    |> Enum.map(&elem(&1, 0))
+    |> Enum.map(fn check -> {check_pattern_id({check}), check} end)
+    |> Map.new()
   end
 
   @doc """
@@ -45,7 +56,7 @@ defmodule Codacy.Credo.Patterns do
   Transform Check params into Codacy Parameters
 
   ## Examples
-    iex> Codacy.Credo.Patterns.check_to_parameters({Credo.Check.Refactor.PipeChainStart})
+    iex> Codacy.Credo.Generator.Patterns.check_to_parameters({Credo.Check.Refactor.PipeChainStart})
     [%{name: "excluded_functions", default: []}]
   """
   @spec check_to_parameters(tuple) :: [map]
@@ -81,9 +92,9 @@ defmodule Codacy.Credo.Patterns do
   Converts Check from config into Codacy priority
 
   ## Example
-    iex> Codacy.Credo.Patterns.check_to_level({Credo.Check.Refactor.LongQuoteBlocks})
+    iex> Codacy.Credo.Generator.Patterns.check_to_level({Credo.Check.Refactor.LongQuoteBlocks})
     "Warning"
-    iex> Codacy.Credo.Patterns.check_to_level({Credo.Check.Refactor.LongQuoteBlocks, [priority: :low]})
+    iex> Codacy.Credo.Generator.Patterns.check_to_level({Credo.Check.Refactor.LongQuoteBlocks, [priority: :low]})
     "Info"
   """
   @spec check_to_level(tuple) :: String.t()
@@ -101,16 +112,16 @@ defmodule Codacy.Credo.Patterns do
   Convert Credo Priority to Codacy Level
 
   ## Example
-    iex> Codacy.Credo.Patterns.priority_to_level(10)
+    iex> Codacy.Credo.Generator.Patterns.priority_to_level(10)
     "Warning"
-    iex> Codacy.Credo.Patterns.priority_to_level(11)
+    iex> Codacy.Credo.Generator.Patterns.priority_to_level(11)
     "Error"
   """
   @spec priority_to_level(integer) :: String.t()
   def priority_to_level(priority) do
     case priority do
       x when x > 10 -> "Error"
-      x when x > 1 -> "Warning"
+      x when x >= 1 -> "Warning"
       _ -> "Info"
     end
   end
@@ -120,6 +131,8 @@ defmodule Codacy.Credo.Patterns do
   """
   @spec check_to_category(tuple) :: String.t()
   def check_to_category(check) do
+    #   ErrorProne, CodeStyle, UnusedCode, Security, Compatibility, Performance, Documentation
+
     case elem(check, 0).category do
       :warning -> "ErrorProne"
       _ -> "CodeStyle"
@@ -130,9 +143,9 @@ defmodule Codacy.Credo.Patterns do
   Convert Check to acceptable patternId
 
   ## Example
-    iex> Codacy.Credo.Patterns.check_pattern_id({Credo.Check.Refactor.LongQuoteBlocks})
+    iex> Codacy.Credo.Generator.Patterns.check_pattern_id({Credo.Check.Refactor.LongQuoteBlocks})
     "refactor_long_quote_blocks"
-    iex> Codacy.Credo.Patterns.check_pattern_id({Credo.Check.Refactor.LongQuoteBlocks, [option: :options]})
+    iex> Codacy.Credo.Generator.Patterns.check_pattern_id({Credo.Check.Refactor.LongQuoteBlocks, [option: :options]})
     "refactor_long_quote_blocks"
   """
   @spec check_pattern_id({atom}) :: String.t()

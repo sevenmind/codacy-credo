@@ -1,9 +1,9 @@
-defmodule Codacy.Credo.Description do
+defmodule Codacy.Credo.Generator.Description do
   @moduledoc """
   Builds description.json from Credo checks
   """
 
-  alias Codacy.Credo.Patterns
+  alias Codacy.Credo.Generator.Patterns
 
   def generate_md() do
     File.cwd!()
@@ -59,7 +59,7 @@ defmodule Codacy.Credo.Description do
   Transform Check into vaguely human readible title
 
   ## examples
-    iex> Codacy.Credo.Description.title_of_check("design_tag_fixme")
+    iex> Codacy.Credo.Generator.Description.title_of_check("design_tag_fixme")
     "Design Tag Fixme"
   """
   def title_of_check(pattern_id) do
@@ -73,7 +73,7 @@ defmodule Codacy.Credo.Description do
     Pulls first line of explanation as 'description'
 
   ## examples
-    iex> Codacy.Credo.Description.description_of_check(Credo.Check.Readability.TrailingBlankLine)
+    iex> Codacy.Credo.Generator.Description.description_of_check(Credo.Check.Readability.TrailingBlankLine)
     "Files should end in a trailing blank line."
   """
   def description_of_check(check) do
@@ -87,7 +87,7 @@ defmodule Codacy.Credo.Description do
   Format Check descriptions for Codacy Docs
 
   ## Examples
-    iex> Codacy.Credo.Description.parameter_descriptions(Credo.Check.Readability.StringSigils)
+    iex> Codacy.Credo.Generator.Description.parameter_descriptions(Credo.Check.Readability.StringSigils)
     [%{name: "maximum_allowed_quotes", description: "The maximum amount of escaped quotes you want to tolerate."}]
   """
   def parameter_descriptions(check) do

@@ -1,12 +1,12 @@
 defmodule Mix.Tasks.Codacy.Credo.Generate do
-  alias Codacy.Credo.Patterns
-  alias Codacy.Credo.Description
+  alias Codacy.Credo.Generator.Patterns
+  alias Codacy.Credo.Generator.Description
   use Mix.Task
 
   @shortdoc "Generate patterns.json"
   @moduledoc @shortdoc
 
-  def run(argv) do
+  def run(_argv) do
     # TODO: Accept Version argument
     #             Will have to download specified version & build from that
 

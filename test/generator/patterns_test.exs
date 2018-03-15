@@ -1,7 +1,7 @@
-defmodule Codacy.Credo.PatternsTest do
-  alias Codacy.Credo.Patterns
+defmodule Codacy.Credo.Generator.PatternsTest do
+  alias Codacy.Credo.Generator.Patterns
   use ExUnit.Case
-  doctest Codacy.Credo.Patterns
+  doctest Codacy.Credo.Generator.Patterns
 
   describe "check_to_pattern/1" do
     test "when just check passed" do
@@ -89,7 +89,7 @@ defmodule Codacy.Credo.PatternsTest do
 
   describe "generate/1" do
     test "generates without error" do
-      assert :ok = Codacy.Credo.Patterns.generate()
+      assert :ok = Codacy.Credo.Generator.Patterns.generate()
     end
   end
 end
