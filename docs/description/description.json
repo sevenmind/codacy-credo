@@ -42,50 +42,6 @@
     "description": "Tabs should be used consistently."
   },
   {
-    "title": "Design Alias Usage",
-    "timeToFix": 5,
-    "patternId": "design_alias_usage",
-    "parameters": [
-      {
-        "name": "if_nested_deeper_than",
-        "description": "Only raise an issue if a module is nested deeper than this."
-      },
-      {
-        "name": "if_called_more_often_than",
-        "description": "Only raise an issue if a module is called more often than this."
-      }
-    ],
-    "description": "Functions from other modules should be used via an alias if the module's namespace is not top-level."
-  },
-  {
-    "title": "Design Duplicated Code",
-    "timeToFix": 5,
-    "patternId": "design_duplicated_code",
-    "parameters": [
-      {
-        "name": "mass_threshold",
-        "description": "The minimum mass which a part of code has to have to qualify for this check."
-      },
-      {
-        "name": "nodes_threshold",
-        "description": "The number of nodes that need to be found to raise an issue."
-      }
-    ],
-    "description": "Code should not be copy-pasted in a codebase when there is room to abstract the copied functionality in a meaningful way."
-  },
-  {
-    "title": "Design Tag Todo",
-    "timeToFix": 5,
-    "patternId": "design_tag_todo",
-    "parameters": [
-      {
-        "name": "include_doc",
-        "description": "Set to `true` to also include tags from @doc attributes."
-      }
-    ],
-    "description": "TODO comments are used to remind yourself of source code related things."
-  },
-  {
     "title": "Design Tag Fixme",
     "timeToFix": 5,
     "patternId": "design_tag_fixme",
@@ -117,30 +73,6 @@
     "description": "Numbers can contain underscores for readability purposes. These do not affect the value of the number, but can help read large numbers more easily."
   },
   {
-    "title": "Readability Max Line Length",
-    "timeToFix": 5,
-    "patternId": "readability_max_line_length",
-    "parameters": [
-      {
-        "name": "max_length",
-        "description": "The maximum number of characters a line may consist of."
-      },
-      {
-        "name": "ignore_definitions",
-        "description": "Set to `true` to ignore lines including function definitions."
-      },
-      {
-        "name": "ignore_specs",
-        "description": "Set to `true` to ignore lines including `@spec`s."
-      },
-      {
-        "name": "ignore_strings",
-        "description": "Set to `true` to ignore lines that are strings or in heredocs"
-      }
-    ],
-    "description": "Checks for the length of lines."
-  },
-  {
     "title": "Readability Module Attribute Names",
     "timeToFix": 5,
     "patternId": "readability_module_attribute_names",
@@ -167,18 +99,18 @@
     "description": "Module names are always written in PascalCase in Elixir."
   },
   {
-    "title": "Readability Parentheses On Zero Arity Defs",
-    "timeToFix": 5,
-    "patternId": "readability_parentheses_on_zero_arity_defs",
-    "parameters": [],
-    "description": "Do not use parentheses when defining a function which has no arguments."
-  },
-  {
     "title": "Readability Parentheses In Condition",
     "timeToFix": 5,
     "patternId": "readability_parentheses_in_condition",
     "parameters": [],
     "description": "Because `if` and `unless` are macros, the preferred style is to not use parentheses around conditions."
+  },
+  {
+    "title": "Readability Parentheses On Zero Arity Defs",
+    "timeToFix": 5,
+    "patternId": "readability_parentheses_on_zero_arity_defs",
+    "parameters": [],
+    "description": "Do not use parentheses when defining a function which has no arguments."
   },
   {
     "title": "Readability Predicate Function Names",
@@ -205,6 +137,20 @@
       }
     ],
     "description": "Files should not have two or more consecutive blank lines."
+  },
+  {
+    "title": "Readability Semicolons",
+    "timeToFix": 5,
+    "patternId": "readability_semicolons",
+    "parameters": [],
+    "description": "Don't use ; to separate statements and expressions. Statements and expressions should be separated by lines."
+  },
+  {
+    "title": "Readability Space After Commas",
+    "timeToFix": 5,
+    "patternId": "readability_space_after_commas",
+    "parameters": [],
+    "description": "You can use white-space after commas to make items of lists, tuples and other enumerations easier to separate from one another."
   },
   {
     "title": "Readability String Sigils",
@@ -245,27 +191,6 @@
     "description": "Variable names are always written in snake_case in Elixir."
   },
   {
-    "title": "Readability Semicolons",
-    "timeToFix": 5,
-    "patternId": "readability_semicolons",
-    "parameters": [],
-    "description": "Don't use ; to separate statements and expressions. Statements and expressions should be separated by lines."
-  },
-  {
-    "title": "Readability Space After Commas",
-    "timeToFix": 5,
-    "patternId": "readability_space_after_commas",
-    "parameters": [],
-    "description": "You can use white-space after commas to make items of lists, tuples and other enumerations easier to separate from one another."
-  },
-  {
-    "title": "Refactor Double Boolean Negation",
-    "timeToFix": 5,
-    "patternId": "refactor_double_boolean_negation",
-    "parameters": [],
-    "description": "Having double negations in your code obscures a parameters original value."
-  },
-  {
     "title": "Refactor Cond Statements",
     "timeToFix": 5,
     "patternId": "refactor_cond_statements",
@@ -283,6 +208,13 @@
       }
     ],
     "description": "Cyclomatic complexity is a software complexity metric closely correlated with coding errors."
+  },
+  {
+    "title": "Refactor Double Boolean Negation",
+    "timeToFix": 5,
+    "patternId": "refactor_double_boolean_negation",
+    "parameters": [],
+    "description": "Having double negations in your code obscures a parameters original value."
   },
   {
     "title": "Refactor Function Arity",
@@ -414,6 +346,13 @@
     "description": "Operations on the same values always yield the same result and therefore make little sense in production code."
   },
   {
+    "title": "Warning Raise Inside Rescue",
+    "timeToFix": 5,
+    "patternId": "warning_raise_inside_rescue",
+    "parameters": [],
+    "description": "Using `Kernel.raise` inside of a `rescue` block creates a new stacktrace, which obscures the cause of the original error."
+  },
+  {
     "title": "Warning Unused Enum Operation",
     "timeToFix": 5,
     "patternId": "warning_unused_enum_operation",
@@ -470,11 +409,86 @@
     "description": "The result of a call to the Tuple module's functions has to be used."
   },
   {
-    "title": "Warning Raise Inside Rescue",
+    "title": "Consistency Multi Alias Import Require Use",
     "timeToFix": 5,
-    "patternId": "warning_raise_inside_rescue",
+    "patternId": "consistency_multi_alias_import_require_use",
     "parameters": [],
-    "description": "Using `Kernel.raise` inside of a `rescue` block creates a new stacktrace, which obscures the cause of the original error."
+    "description": "When using alias, import, require or use for multiple names from the same namespace, you have two options:"
+  },
+  {
+    "title": "Design Alias Usage",
+    "timeToFix": 5,
+    "patternId": "design_alias_usage",
+    "parameters": [
+      {
+        "name": "if_nested_deeper_than",
+        "description": "Only raise an issue if a module is nested deeper than this."
+      },
+      {
+        "name": "if_called_more_often_than",
+        "description": "Only raise an issue if a module is called more often than this."
+      }
+    ],
+    "description": "Functions from other modules should be used via an alias if the module's namespace is not top-level."
+  },
+  {
+    "title": "Design Duplicated Code",
+    "timeToFix": 5,
+    "patternId": "design_duplicated_code",
+    "parameters": [
+      {
+        "name": "mass_threshold",
+        "description": "The minimum mass which a part of code has to have to qualify for this check."
+      },
+      {
+        "name": "nodes_threshold",
+        "description": "The number of nodes that need to be found to raise an issue."
+      }
+    ],
+    "description": "Code should not be copy-pasted in a codebase when there is room to abstract the copied functionality in a meaningful way."
+  },
+  {
+    "title": "Design Tag Todo",
+    "timeToFix": 5,
+    "patternId": "design_tag_todo",
+    "parameters": [
+      {
+        "name": "include_doc",
+        "description": "Set to `true` to also include tags from @doc attributes."
+      }
+    ],
+    "description": "TODO comments are used to remind yourself of source code related things."
+  },
+  {
+    "title": "Readability Max Line Length",
+    "timeToFix": 5,
+    "patternId": "readability_max_line_length",
+    "parameters": [
+      {
+        "name": "max_length",
+        "description": "The maximum number of characters a line may consist of."
+      },
+      {
+        "name": "ignore_definitions",
+        "description": "Set to `true` to ignore lines including function definitions."
+      },
+      {
+        "name": "ignore_specs",
+        "description": "Set to `true` to ignore lines including `@spec`s."
+      },
+      {
+        "name": "ignore_strings",
+        "description": "Set to `true` to ignore lines that are strings or in heredocs"
+      }
+    ],
+    "description": "Checks for the length of lines."
+  },
+  {
+    "title": "Readability Specs",
+    "timeToFix": 5,
+    "patternId": "readability_specs",
+    "parameters": [],
+    "description": "Functions, callbacks and macros need typespecs."
   },
   {
     "title": "Refactor Abc Size",
@@ -508,20 +522,6 @@
     "patternId": "warning_map_get_unsafe_pass",
     "parameters": [],
     "description": "`Map.get/2` can lead into runtime errors if the result is passed into a pipe without a proper default value. This happens when the next function in the pipe cannot handle `nil` values correctly."
-  },
-  {
-    "title": "Consistency Multi Alias Import Require Use",
-    "timeToFix": 5,
-    "patternId": "consistency_multi_alias_import_require_use",
-    "parameters": [],
-    "description": "When using alias, import, require or use for multiple names from the same namespace, you have two options:"
-  },
-  {
-    "title": "Readability Specs",
-    "timeToFix": 5,
-    "patternId": "readability_specs",
-    "parameters": [],
-    "description": "Functions, callbacks and macros need typespecs."
   },
   {
     "title": "Warning Name Redeclaration By Assignment",

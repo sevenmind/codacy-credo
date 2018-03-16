@@ -14,6 +14,7 @@ defmodule Codacy.Credo.Generator.Patterns do
     dir
     |> Credo.ConfigFile.read_or_default()
     |> Map.get(:checks)
+    |> Enum.sort()
   end
 
   def write_patterns(patterns) do

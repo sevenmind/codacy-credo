@@ -20,7 +20,7 @@ defmodule Codacy.Credo do
   def run(%Config{codacy_config: :use_default} = config) do
     File.cd(config.path)
 
-    struct(Credo.Execution, argv: ["--strict"])
+    struct(Credo.Execution, argv: ["--strict", "-a"])
     |> Credo.Execution.Task.ParseOptions.call(nil)
     |> Credo.Execution.Task.ConvertCLIOptionsToConfig.call(nil)
     |> Credo.Execution.Task.DetermineCommand.call(nil)

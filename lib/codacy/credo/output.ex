@@ -25,13 +25,13 @@ defmodule Codacy.Credo.Output do
   end
 
   defp pretty_print_issue(issue) do
-    IO.puts(Poison.encode!(issue, pretty: true))
+    IO.puts(Poison.encode!(issue))
   end
 
   defp pp_invalid_files(filename) do
     IO.puts(Poison.encode!(%{
       filename: filename,
       message: "error parsing file"
-    }, pretty: true))
+    }))
   end
 end

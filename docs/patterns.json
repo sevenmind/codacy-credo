@@ -45,119 +45,6 @@
       "category": "CodeStyle"
     },
     {
-      "patternId": "design_alias_usage",
-      "parameters": [
-        {
-          "name": "excluded_namespaces",
-          "default": [
-            "File",
-            "IO",
-            "Inspect",
-            "Kernel",
-            "Macro",
-            "Supervisor",
-            "Task",
-            "Version"
-          ]
-        },
-        {
-          "name": "excluded_lastnames",
-          "default": [
-            "Access",
-            "Agent",
-            "Application",
-            "Atom",
-            "Base",
-            "Behaviour",
-            "Bitwise",
-            "Code",
-            "Date",
-            "DateTime",
-            "Dict",
-            "Enum",
-            "Exception",
-            "File",
-            "Float",
-            "GenEvent",
-            "GenServer",
-            "HashDict",
-            "HashSet",
-            "Integer",
-            "IO",
-            "Kernel",
-            "Keyword",
-            "List",
-            "Macro",
-            "Map",
-            "MapSet",
-            "Module",
-            "NaiveDateTime",
-            "Node",
-            "OptionParser",
-            "Path",
-            "Port",
-            "Process",
-            "Protocol",
-            "Range",
-            "Record",
-            "Regex",
-            "Registry",
-            "Set",
-            "Stream",
-            "String",
-            "StringIO",
-            "Supervisor",
-            "System",
-            "Task",
-            "Time",
-            "Tuple",
-            "URI",
-            "Version"
-          ]
-        },
-        {
-          "name": "if_nested_deeper_than",
-          "default": 0
-        },
-        {
-          "name": "if_called_more_often_than",
-          "default": 0
-        }
-      ],
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "design_duplicated_code",
-      "parameters": [
-        {
-          "name": "mass_threshold",
-          "default": 40
-        },
-        {
-          "name": "nodes_threshold",
-          "default": 2
-        },
-        {
-          "name": "excluded_macros",
-          "default": []
-        }
-      ],
-      "level": "Error",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "design_tag_todo",
-      "parameters": [
-        {
-          "name": "include_doc",
-          "default": true
-        }
-      ],
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
       "patternId": "design_tag_fixme",
       "parameters": [
         {
@@ -186,29 +73,6 @@
       "category": "CodeStyle"
     },
     {
-      "patternId": "readability_max_line_length",
-      "parameters": [
-        {
-          "name": "max_length",
-          "default": 80
-        },
-        {
-          "name": "ignore_definitions",
-          "default": true
-        },
-        {
-          "name": "ignore_specs",
-          "default": false
-        },
-        {
-          "name": "ignore_strings",
-          "default": true
-        }
-      ],
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
       "patternId": "readability_module_attribute_names",
       "parameters": [],
       "level": "Warning",
@@ -234,15 +98,15 @@
       "category": "CodeStyle"
     },
     {
-      "patternId": "readability_parentheses_on_zero_arity_defs",
-      "parameters": [],
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
       "patternId": "readability_parentheses_in_condition",
       "parameters": [],
       "level": "Warning",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "readability_parentheses_on_zero_arity_defs",
+      "parameters": [],
+      "level": "Info",
       "category": "CodeStyle"
     },
     {
@@ -265,6 +129,18 @@
           "default": 1
         }
       ],
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "readability_semicolons",
+      "parameters": [],
+      "level": "Warning",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "readability_space_after_commas",
+      "parameters": [],
       "level": "Info",
       "category": "CodeStyle"
     },
@@ -303,24 +179,6 @@
       "category": "CodeStyle"
     },
     {
-      "patternId": "readability_semicolons",
-      "parameters": [],
-      "level": "Warning",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "readability_space_after_commas",
-      "parameters": [],
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "refactor_double_boolean_negation",
-      "parameters": [],
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
       "patternId": "refactor_cond_statements",
       "parameters": [],
       "level": "Info",
@@ -334,6 +192,12 @@
           "default": 9
         }
       ],
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "refactor_double_boolean_negation",
+      "parameters": [],
       "level": "Info",
       "category": "CodeStyle"
     },
@@ -461,6 +325,12 @@
       "category": "ErrorProne"
     },
     {
+      "patternId": "warning_raise_inside_rescue",
+      "parameters": [],
+      "level": "Info",
+      "category": "ErrorProne"
+    },
+    {
       "patternId": "warning_unused_enum_operation",
       "parameters": [],
       "level": "Warning",
@@ -509,10 +379,152 @@
       "category": "ErrorProne"
     },
     {
-      "patternId": "warning_raise_inside_rescue",
+      "patternId": "consistency_multi_alias_import_require_use",
+      "parameters": [],
+      "level": "Warning",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "design_alias_usage",
+      "parameters": [
+        {
+          "name": "excluded_namespaces",
+          "default": [
+            "File",
+            "IO",
+            "Inspect",
+            "Kernel",
+            "Macro",
+            "Supervisor",
+            "Task",
+            "Version"
+          ]
+        },
+        {
+          "name": "excluded_lastnames",
+          "default": [
+            "Access",
+            "Agent",
+            "Application",
+            "Atom",
+            "Base",
+            "Behaviour",
+            "Bitwise",
+            "Code",
+            "Date",
+            "DateTime",
+            "Dict",
+            "Enum",
+            "Exception",
+            "File",
+            "Float",
+            "GenEvent",
+            "GenServer",
+            "HashDict",
+            "HashSet",
+            "Integer",
+            "IO",
+            "Kernel",
+            "Keyword",
+            "List",
+            "Macro",
+            "Map",
+            "MapSet",
+            "Module",
+            "NaiveDateTime",
+            "Node",
+            "OptionParser",
+            "Path",
+            "Port",
+            "Process",
+            "Protocol",
+            "Range",
+            "Record",
+            "Regex",
+            "Registry",
+            "Set",
+            "Stream",
+            "String",
+            "StringIO",
+            "Supervisor",
+            "System",
+            "Task",
+            "Time",
+            "Tuple",
+            "URI",
+            "Version"
+          ]
+        },
+        {
+          "name": "if_nested_deeper_than",
+          "default": 0
+        },
+        {
+          "name": "if_called_more_often_than",
+          "default": 0
+        }
+      ],
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "design_duplicated_code",
+      "parameters": [
+        {
+          "name": "mass_threshold",
+          "default": 40
+        },
+        {
+          "name": "nodes_threshold",
+          "default": 2
+        },
+        {
+          "name": "excluded_macros",
+          "default": []
+        }
+      ],
+      "level": "Error",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "design_tag_todo",
+      "parameters": [
+        {
+          "name": "include_doc",
+          "default": true
+        }
+      ],
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "readability_max_line_length",
+      "parameters": [
+        {
+          "name": "max_length",
+          "default": 80
+        },
+        {
+          "name": "ignore_definitions",
+          "default": true
+        },
+        {
+          "name": "ignore_specs",
+          "default": false
+        },
+        {
+          "name": "ignore_strings",
+          "default": true
+        }
+      ],
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "readability_specs",
       "parameters": [],
       "level": "Info",
-      "category": "ErrorProne"
+      "category": "CodeStyle"
     },
     {
       "patternId": "refactor_abc_size",
@@ -542,18 +554,6 @@
       "parameters": [],
       "level": "Warning",
       "category": "ErrorProne"
-    },
-    {
-      "patternId": "consistency_multi_alias_import_require_use",
-      "parameters": [],
-      "level": "Warning",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "readability_specs",
-      "parameters": [],
-      "level": "Info",
-      "category": "CodeStyle"
     },
     {
       "patternId": "warning_name_redeclaration_by_assignment",

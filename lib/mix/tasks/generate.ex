@@ -1,6 +1,7 @@
 defmodule Mix.Tasks.Codacy.Credo.Generate do
   alias Codacy.Credo.Generator.Patterns
   alias Codacy.Credo.Generator.Description
+  alias Codacy.Credo.Generator.Tests
   use Mix.Task
 
   @shortdoc "Generate patterns.json"
@@ -13,5 +14,8 @@ defmodule Mix.Tasks.Codacy.Credo.Generate do
     Patterns.generate()
     Description.generate_json()
     Description.generate_md()
+
+    # If you need to regenerate the test templates, reenable this
+    # Tests.generate()
   end
 end
