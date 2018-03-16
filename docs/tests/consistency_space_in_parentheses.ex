@@ -1,5 +1,4 @@
 ##Patterns: consistency_space_in_parentheses
- ##Warning: consistency_space_in_parentheses
 defmodule Credo.Sample1 do
   @default_sources_glob ~w(** *.{ex,exs})
   @username_regex ~r/^[A-z0-9 ]+$/

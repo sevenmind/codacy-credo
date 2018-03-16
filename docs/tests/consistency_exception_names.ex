@@ -6,7 +6,6 @@ defmodule Credo.Sample do
   end
 end
 
- ##Warning: consistency_exception_names
 defmodule UndefinedResponse do
   defexception [:message]
 end
@@ -16,7 +15,7 @@ defmodule Credo.Sample do
   defmodule SomeException do
     defexception [:message]
   end
- ##Warning: consistency_exception_names
+
   defmodule UndefinedResponse do    # <--- does not have the suffix "Exception"
     defexception [:message]
   end
@@ -39,7 +38,6 @@ defmodule InvalidReponseFromServer do
   defexception [:message]
 end
 
- ##Warning: consistency_exception_names
 defmodule UndefinedDataFormat do    # <--- does not have the prefix "Invalid"
   defexception [:message]
 end

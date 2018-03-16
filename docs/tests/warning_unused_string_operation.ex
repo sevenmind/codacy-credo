@@ -1,9 +1,9 @@
-##Patterns: warning_unused_string_operation 
- ##Warning: warning_unused_string_operation
+##Patterns: warning_unused_string_operation
 defmodule CredoSampleModule do
   def some_function(parameter1, parameter2) do
     x = parameter1 + parameter2
 
+ ##Warning: warning_unused_string_operation
     String.split(parameter1)
 
     parameter1
@@ -13,6 +13,7 @@ end
 defmodule CredoSampleModule do
   def some_function(parameter1, parameter2) do
     parameter1 + parameter2
+ ##Warning: warning_unused_string_operation
     |> String.split(parameter1)
 
     parameter1
@@ -24,6 +25,7 @@ defmodule CredoSampleModule do
     if issue.column do
       [
         :this_goes_nowhere,
+ ##Warning: warning_unused_string_operation
         String.duplicate("^", w) # THIS is not the last_call!
       ]
       IO.puts "."
@@ -38,6 +40,7 @@ defmodule CredoSampleModule do
     if issue.column do
       IO.puts "."
     else
+ ##Warning: warning_unused_string_operation
       String.trim(filename)
       IO.puts "x"
     end
@@ -53,6 +56,7 @@ defmodule CredoSampleModule do
         true -> false
         _ ->
           Enum.reduce(arr, fn(w) ->
+ ##Warning: warning_unused_string_operation
             [:this_goes_nowhere, String.duplicate("^", w)]
           end)
       end
@@ -67,6 +71,7 @@ defmodule CredoSampleModule do
     if issue.column do
       IO.puts "."
     else
+ ##Warning: warning_unused_string_operation
       [:this_goes_nowhere, String.duplicate("^", w)] # THIS is not the last_call!
     end
 
@@ -79,6 +84,7 @@ defmodule CredoSampleModule do
     if issue.column do
       IO.puts "."
     else
+ ##Warning: warning_unused_string_operation
       [:this_goes_nowhere, String.duplicate("^", w)] # THIS is not the last_call!
       IO.puts " "
     end
@@ -87,14 +93,17 @@ end
 
 defmodule CredoSampleModule do
   def some_function(parameter1, parameter2) do
+ ##Warning: warning_unused_string_operation
     String.split(parameter1)
     parameter1
   end
   def some_function2(parameter1, parameter2) do
+ ##Warning: warning_unused_string_operation
    String.trim(parameter1)
    parameter1
    end
    def some_function3(parameter1, parameter2) do
+ ##Warning: warning_unused_string_operation
      String.trim(parameter1)
      parameter1
    end
@@ -103,6 +112,7 @@ end
 defmodule CredoSampleModule do
   defp something(bin) do
     for segment <- String.split(bin, "/"), segment != "" do
+ ##Warning: warning_unused_string_operation
       String.upcase(segment)
       segment
     end

@@ -1,5 +1,4 @@
 ##Patterns: consistency_parameter_pattern_matching
- ##Warning: consistency_parameter_pattern_matching
 defmodule Credo.Sample do
   defmodule InlineModule do
     def list_after([bar, baz] = foo), do: :ok

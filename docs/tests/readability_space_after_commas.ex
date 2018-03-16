@@ -1,5 +1,4 @@
 ##Patterns: readability_space_after_commas
- ##Info: readability_space_after_commas
 defmodule CredoSampleModule do
  ##Info: readability_space_after_commas
   @attribute {:foo,:bar}

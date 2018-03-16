@@ -3,6 +3,7 @@
 defmodule CredoSampleModule do
   use ExUnit.Case # FIXME: this should not appear in the TODO test
 
+ ##Info: design_tag_todo
   # TODO: this should not appear in the # TODO test
 
   def some_fun do
@@ -24,6 +25,7 @@ defmodule CredoSampleModule do
 end
 
 defmodule CredoSampleModule do
+ ##Info: design_tag_todo
   @moduledoc """
   TODO: this should not appear in the TODO test
   """
@@ -36,6 +38,7 @@ defmodule CredoSampleModule do
 end
 
 defmodule CredoSampleModule do
+ ##Info: design_tag_todo
   @shortdoc """
   TODO: this should not appear in the TODO test
   """
@@ -50,6 +53,7 @@ end
 defmodule CredoSampleModule do
   use ExUnit.Case # FIXME: this should not appear in the TODO test
 
+ ##Info: design_tag_todo
 # TODO: this should appear
 
   def some_fun do
@@ -58,14 +62,17 @@ defmodule CredoSampleModule do
 end
 
 defmodule CredoSampleModule do
+ ##Info: design_tag_todo
   #TODO: this should appear
 end
 
 defmodule CredoSampleModule do
+ ##Info: design_tag_todo
   #       TODO: this should appear
 end
 
 defmodule CredoSampleModule do
+ ##Info: design_tag_todo
   # TODO:         this should appear
 end
 
@@ -78,20 +85,24 @@ end
 
 defmodule CredoSampleModule do
   def some_fun do
+ ##Info: design_tag_todo
     # todo blah blah
     Repo.preload(:comments)
   end
 end
 
 defmodule CredoSampleModule do
+ ##Info: design_tag_todo
   use ExUnit.Case # TODO: this is the first
   @moduledoc """
     this is an example # TODO: and this is an actual TODO
   """
 
+ ##Info: design_tag_todo
   def some_fun do # TODO this is the second
     x = ~s{also: # TODO: no comment here}
     assert 2 == x
+ ##Info: design_tag_todo
     ?" # TODO: this is the third
 
     "also: # TODO: no comment here as well"

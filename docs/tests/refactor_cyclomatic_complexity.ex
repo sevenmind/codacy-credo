@@ -1,9 +1,9 @@
-## Patterns: refactor_cyclomatic_complexity
-## Info: refactor_cyclomatic_complexity
+##Patterns: refactor_cyclomatic_complexity
 def some_function do
   if x == 0, do: x = 1
 end
 
+##Info: refactor_cyclomatic_complexity
 def first_fun do
   if first_condition do
     call_something

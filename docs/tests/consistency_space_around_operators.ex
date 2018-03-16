@@ -1,5 +1,4 @@
 ##Patterns: consistency_space_around_operators
- ##Warning: consistency_space_around_operators
 defmodule Credo.Sample1 do
   defmodule InlineModule do
     @min -1
@@ -38,10 +37,8 @@ defmodule Credo.Sample2 do
     end
 
     def foo do
- ##Warning: consistency_space_around_operators
       <<_, unquoted::binary-size(size), _>> = quoted
       <<data::size(len)-binary, _::binary>>
- ##Warning: consistency_space_around_operators
       <<102::integer-native, rest::binary>>
       <<102::native-integer, rest::binary>>
       <<102::unsigned-big-integer, rest::binary>>
@@ -163,13 +160,13 @@ end
 
 defmodule CredoTests do
 def bar do
+ ##Warning: consistency_space_around_operators
 2+3
 4 + 5
 end
 end
 
 defmodule OtherModule3 do
- ##Warning: consistency_space_around_operators
   defmacro foo do
     3+4
   end

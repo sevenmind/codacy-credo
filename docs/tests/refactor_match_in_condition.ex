@@ -1,7 +1,7 @@
 ##Patterns: refactor_match_in_condition
- ##Info: refactor_match_in_condition
 defmodule CredoSampleModule do
   def some_function(parameter1, parameter2) do
+ ##Info: refactor_match_in_condition
     if {:ok, value} = parameter1 do
       do_something
     end
@@ -13,6 +13,7 @@ defmodule CredoSampleModule do
     if String.match?(name, ~r/^[a-z]/) do
       mod_name = names |> Enum.slice(0..length(names) - 2) |> Enum.join(".")
       mod_prio = lookup[mod_name]
+ ##Info: refactor_match_in_condition
       if {:ok, value} = parameter1 do         # <-- this one should be found
         do_something
       end
@@ -33,6 +34,7 @@ end
 
 defmodule CredoSampleModule do
   def some_function(parameter1, parameter2) do
+ ##Info: refactor_match_in_condition
     unless {:ok, value} = parameter1 do
       do_something
     end
@@ -41,12 +43,14 @@ end
 
 defmodule CredoSampleModule do
   def some_function(parameter1, parameter2) do
+ ##Info: refactor_match_in_condition
     if !is_nil(baz = Map.get(foo, :bar)), do: baz
   end
 end
 
 defmodule CredoSampleModule do
   def some_function(parameter1, parameter2) do
+ ##Info: refactor_match_in_condition
     if allowed? && !is_nil(baz = Map.get(foo, :bar)) do
       baz
     end
@@ -55,6 +59,7 @@ end
 
 defmodule CredoSampleModule do
   def some_function(parameter1, parameter2) do
+ ##Info: refactor_match_in_condition
     unless !(x = Map.get(foo, :bar)), do: x
   end
 end

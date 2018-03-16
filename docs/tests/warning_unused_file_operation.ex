@@ -1,9 +1,9 @@
-##Patterns: warning_unused_file_operation 
- ##Warning: warning_unused_file_operation
+##Patterns: warning_unused_file_operation
 defmodule CredoSampleModule do
   defp print_issue(w) do
     for x <- [1, 2, 3] do
       # this goes nowhere!
+ ##Warning: warning_unused_file_operation
       File.read(w, ",")
       x
     end
@@ -15,6 +15,7 @@ defmodule CredoSampleModule do
     if issue.column do
       [
         :this_goes_nowhere,
+ ##Warning: warning_unused_file_operation
         File.read(w, ",") # THIS is not the last_call!
       ]
       IO.puts "."
@@ -29,6 +30,7 @@ defmodule CredoSampleModule do
     if issue.column do
       IO.puts "."
     else
+ ##Warning: warning_unused_file_operation
       File.stat(filename)
       IO.puts "x"
     end
@@ -40,6 +42,7 @@ defmodule CredoSampleModule do
     if issue.column do
       IO.puts "."
     else
+ ##Warning: warning_unused_file_operation
       [:this_goes_nowhere, File.read(w, ",")] # THIS is not the last_call!
     end
 
@@ -52,6 +55,7 @@ defmodule CredoSampleModule do
     if issue.column do
       IO.puts "."
     else
+ ##Warning: warning_unused_file_operation
       [:this_goes_nowhere, File.read(w, ",")] # THIS is not the last_call!
       IO.puts " "
     end

@@ -1,5 +1,4 @@
 ##Patterns: readability_prefer_implicit_try
- ##Info: readability_prefer_implicit_try
 defmodule ModuleWithExplicitTry do
   @moduledoc ""
   def failing_function(first) do

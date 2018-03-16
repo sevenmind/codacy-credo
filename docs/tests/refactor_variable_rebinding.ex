@@ -1,5 +1,4 @@
 ##Patterns: refactor_variable_rebinding
- ##Info: refactor_variable_rebinding
 defmodule CredoSampleModule do
   def some_function(parameter1, parameter2) do
     a = 1
@@ -25,14 +24,12 @@ defmodule CredoSampleModule do
     something = "ABABAB"
  ##Info: refactor_variable_rebinding
     {:ok, something} = Base.decode16(something)
- ##Info: refactor_variable_rebinding
     {a, a} = {2, 2} # this should _not_ trigger it
   end
 end
 
 defmodule CredoSampleModule do
   def some_function() do
- ##Info: refactor_variable_rebinding
     {a = b, a = b} = {1, 2}
  ##Info: refactor_variable_rebinding
     b = 2

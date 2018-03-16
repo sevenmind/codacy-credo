@@ -1,7 +1,7 @@
-## Patterns: refactor_abc_size
+##Patterns: refactor_abc_size
 
 defmodule CheckModule do
-## Info: refactor_abc_size
+##Info: refactor_abc_size
   def run_thing(opts) do
     source_file = IssueMeta.source_file(issue_meta)
     params = IssueMeta.params(issue_meta)

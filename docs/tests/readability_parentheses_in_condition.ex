@@ -1,5 +1,4 @@
 ##Patterns: readability_parentheses_in_condition
- ##Warning: readability_parentheses_in_condition
 defmodule Mix.Tasks.Credo do
   def run(argv) do
  ##Warning: readability_parentheses_in_condition

@@ -1,5 +1,5 @@
-##Patterns: readability_module_attribute_names 
- ##Warning: readability_module_attribute_names
+##Patterns: readability_module_attribute_names
 defmodule CredoSampleModule do
+  ##Warning: readability_module_attribute_names
   @someFoobar false
 end

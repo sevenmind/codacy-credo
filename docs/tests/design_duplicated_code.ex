@@ -1,5 +1,6 @@
 ##Patterns: design_duplicated_code
 defmodule M1 do
+ ##Error: design_duplicated_code
   mod_fun "something is duplicated" do
     if p1 == p2 do
       p1
@@ -24,7 +25,6 @@ end
 
 defmodule M2 do
   mod_fun "something is duplicated" do
- ##Error: design_duplicated_code
     if p1 == p2 do
       p1
     else

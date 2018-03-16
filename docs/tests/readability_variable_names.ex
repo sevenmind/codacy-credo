@@ -1,5 +1,4 @@
 ##Patterns: readability_variable_names
- ##Warning: readability_variable_names
 defmodule CredoSampleModule do
   def some_function(parameter1, parameter2) do
  ##Warning: readability_variable_names

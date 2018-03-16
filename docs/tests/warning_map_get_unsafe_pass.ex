@@ -1,5 +1,4 @@
 ##Patterns: warning_map_get_unsafe_pass
- ##Warning: warning_map_get_unsafe_pass
 defmodule CredoSampleModule do
   def some_function() do
 

@@ -1,6 +1,6 @@
-##Patterns: warning_name_redeclaration_by_def 
- ##Warning: warning_name_redeclaration_by_def
+##Patterns: warning_name_redeclaration_by_def
 defmodule CredoSampleModule do
+ ##Warning: warning_name_redeclaration_by_def
   def fun1({a, b, c} = fun2) do
     fun2 + c
   end
@@ -9,6 +9,7 @@ defmodule CredoSampleModule do
 end
 
 defmodule CredoSampleModule do
+ ##Warning: warning_name_redeclaration_by_def
   def fun1({a, fun2, c}) do
     fun2 + c
   end
