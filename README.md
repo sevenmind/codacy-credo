@@ -50,3 +50,26 @@ A number checks aren't working correctly:
  * readability_trailing_white_space
  * refactor_append_single_item
  * refactor_double_boolean_negation
+
+
+## Testing
+
+This tool us partially tested. Any efforts to refactor or improve coverage are greatly appreciated. 
+
+There are two test suites that can be run on this project. The first is Elixir Unit Tests. 
+
+
+```
+mix test
+```
+
+The Second test suite is the [Codacy Plugin Test](https://github.com/codacy/codacy-plugins-test) which must be run against the built docker image.
+
+
+```sh
+# In codacy-credo
+docker build . -t codacy/credo:latest
+
+# in codacy-plugins-test
+sbt "run-main codacy.plugins.DockerTest all codacy/credo:latest"
+```

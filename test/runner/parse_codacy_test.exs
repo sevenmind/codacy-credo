@@ -22,7 +22,7 @@ defmodule Codacy.Credo.ConfigTest do
 
       expected_files = %{
         included: ["lib/app.ex"],
-        excluded: []
+        excluded: [~r/\/_build\//, ~r/\/deps\//]
       }
 
       assert expected_files ==
