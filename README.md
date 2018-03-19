@@ -1,6 +1,6 @@
 # Codacy Credo
 
-Docker engine for running Elixir Credo on Codacy.
+Tooling & Docker Definition for running [Credo](https://github.com/rrrene/credo) on [Codacy](https://codacy.com)
 
 ## Usage
 
@@ -33,3 +33,20 @@ This project has only been tested with:
 * Elixir v1.6
 * Erlang v20
 * Credo v0.8
+
+
+## Known issues
+ 
+A number checks aren't working correctly:
+ 
+ * consistency_line_endings
+ * readability_large_numbers
+ * readability_max_line_length
+ * readability_parentheses_on_zero_arity_defs
+ * readability_prefer_implicit_try
+ * readability_redundant_blank_lines
+ * readability_string_sigils
+ * readability_trailing_blank_line
+ * readability_trailing_white_space
+ * refactor_append_single_item
+ * refactor_double_boolean_negation
