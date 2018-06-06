@@ -30,8 +30,8 @@ This has not been tested with custom checks. They probably won't work or will ha
 
 This project has only been tested with:
 
-* Elixir v1.6
-* Erlang v20
+* Elixir v1.6.5
+* Erlang v20.2
 * Credo v0.8
 
 

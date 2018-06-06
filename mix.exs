@@ -4,7 +4,7 @@ defmodule CodacyCredo.MixProject do
   def project do
     [
       app: :codacy_credo,
-      version: "0.1.0",
+      version: "0.1.1",
       elixir: "~> 1.6",
       start_permanent: Mix.env() == :prod,
       test_coverage: [tool: Coverex.Task],
@@ -26,7 +26,7 @@ defmodule CodacyCredo.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:credo, "~> 0.8"},
+      {:credo, "~> 0.9"},
       {:poison, "~> 3.1"},
       {:distillery, "1.5.2", runtime: false},
       {:mix_test_watch, "~> 0.5", only: :dev, runtime: false},

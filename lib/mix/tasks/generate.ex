@@ -1,7 +1,6 @@
 defmodule Mix.Tasks.Codacy.Credo.Generate do
   alias Codacy.Credo.Generator.Patterns
   alias Codacy.Credo.Generator.Description
-  alias Codacy.Credo.Generator.Tests
   use Mix.Task
 
   @shortdoc "Generate patterns.json"

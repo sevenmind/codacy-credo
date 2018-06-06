@@ -1,4 +1,5 @@
-FROM bitwalker/alpine-elixir:1.6.2
+FROM bitwalker/alpine-elixir:1.6.5
+
 ENV MIX_ENV=prod
 
 # Copy Codacy Docs
@@ -8,7 +9,7 @@ WORKDIR /tmp/build
 ADD . /tmp/build
 
 # Build & install deps
-RUN mix do local.hex --force , local.rebar --force , deps.get, deps.compile
+RUN mix do local.hex --force, local.rebar --force, deps.get, deps.compile
 RUN mix release
 
 # Copy build product to runtime
