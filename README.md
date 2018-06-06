@@ -7,13 +7,13 @@ Tooling & Docker Definition for running [Credo](https://github.com/rrrene/credo)
 build the docker image
 
 ```
-docker build . -t credo/codacy
+docker build . -t codacy/codacy-credo
 ```
 
 Run on a project
 
 ```
-docker run -it -v  $srcDir:/src credo/codacy
+docker run -it -v  $srcDir:/src codacy/codacy-credo
 ```
 
 Regenerate docs:
@@ -32,7 +32,7 @@ This project has only been tested with:
 
 * Elixir v1.6.5
 * Erlang v20.2
-* Credo v0.8
+* Credo v0.9.3
 
 
 ## Known issues
