@@ -9,7 +9,7 @@ WORKDIR /tmp/build
 ADD . /tmp/build
 
 # Build & install deps
-RUN mix do local.hex --force, local.rebar --force,
+RUN mix do local.hex --force, local.rebar --force
 RUN mix deps.get
 RUN mix deps.compile
 RUN mix release
