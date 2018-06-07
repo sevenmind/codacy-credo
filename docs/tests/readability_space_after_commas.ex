@@ -6,6 +6,9 @@ end
 
 defmodule CredoSampleModule do
  ##Info: readability_space_after_commas
+ ##Info: readability_space_after_commas
+ ##Info: readability_space_after_commas
+ ##Info: readability_space_after_commas
   @attribute [1,2,"three",4,5]
 end
 

@@ -9,6 +9,7 @@ defmodule CredoSampleMod do
   !!!true
 
 ##Info: refactor_double_boolean_negation
+##Info: refactor_double_boolean_negation
   !!!!true
 
 ##Info: refactor_double_boolean_negation

@@ -56,7 +56,6 @@ defmodule CredoSampleModule do
         true -> false
         _ ->
           Enum.reduce(arr, fn(w) ->
- ##Warning: warning_unused_string_operation
             [:this_goes_nowhere, String.duplicate("^", w)]
           end)
       end

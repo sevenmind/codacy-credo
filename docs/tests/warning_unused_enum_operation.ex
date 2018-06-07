@@ -68,7 +68,6 @@ defmodule CredoSampleModule do
         _ ->
  ##Warning: warning_unused_enum_operation
           Enum.reduce(arr, fn(w) ->
- ##Warning: warning_unused_enum_operation
             [:this_goes_nowhere, Enum.join(w, ",")]
           end)
       end

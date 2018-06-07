@@ -20,7 +20,7 @@ end
 defmodule Credo.Sample do
  ##Warning: consistency_tabs_or_spaces
 	@test_attribute :foo
-
+ ##Warning: consistency_tabs_or_spaces
 	def foobar(parameter1, parameter2) do
  ##Warning: consistency_tabs_or_spaces
 		String.split(parameter1) + parameter2

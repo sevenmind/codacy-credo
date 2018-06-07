@@ -55,8 +55,8 @@ defmodule CredoSampleModule do
       case check do
         true -> false
         _ ->
+         ##Warning: warning_unused_regex_operation
           Regex.insert_at(arr, [], fn(w) ->
- ##Warning: warning_unused_regex_operation
             [:this_goes_nowhere, Regex.compile!(w, ",")]
           end)
       end
