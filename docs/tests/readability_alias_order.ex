@@ -1,9 +1,11 @@
 ##Patterns: readability_alias_order
+##Issue: {"severity": "Info", "line": 16, "patternId": "readability_alias_order"}  
 defmodule CredoSampleModule do
   alias App.CLI.{Bar, Baz}
 
   alias App.Foo.{
     Sorter,
+##Info: readability_alias_order
     Command,
     Filename
   }
