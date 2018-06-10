@@ -5,7 +5,7 @@ defmodule CodacyCredo.MixProject do
     [
       app: :codacy_credo,
       version: "0.1.1",
-      elixir: "1.6.5",
+      elixir: version_from_file(".elixir-version"),
       start_permanent: Mix.env() == :prod,
       test_coverage: [tool: Coverex.Task],
       deps: deps(),
@@ -33,5 +33,14 @@ defmodule CodacyCredo.MixProject do
       {:inch_ex, "0.5.6", only: [:dev, :test]},
       {:coverex, "1.4.15", only: :test}
     ]
+  end
+
+  defp version_from_file(file_name) do
+    File.read(file_name)
+    |> handle_file_version
+  end
+
+  defp handle_file_version({:ok, content}) do
+    content
   end
 end

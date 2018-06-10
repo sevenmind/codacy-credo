@@ -1,4 +1,5 @@
-FROM bitwalker/alpine-elixir:1.6.5 as builder
+ARG elixir_version
+FROM bitwalker/alpine-elixir:${elixir_version} as builder
 ENV MIX_ENV=prod
 WORKDIR /tmp/build
 ADD . /tmp/build
