@@ -24,7 +24,12 @@
     "title": "Consistency Space Around Operators",
     "timeToFix": 5,
     "patternId": "consistency_space_around_operators",
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "ignore",
+        "description": "List of operators to be ignored for this check."
+      }
+    ],
     "description": "Use spaces around operators like `+`, `-`, `*` and `/`. This is the **preferred** way, although other styles are possible, as long as it is applied consistently."
   },
   {
@@ -431,6 +436,14 @@
       {
         "name": "if_called_more_often_than",
         "description": "Only raise an issue if a module is called more often than this."
+      },
+      {
+        "name": "excluded_namespaces",
+        "description": "List of namespaces to be excluded for this check."
+      },
+      {
+        "name": "excluded_lastnames",
+        "description": "List of lastnames to be excluded for this check."
       }
     ],
     "description": "Functions from other modules should be used via an alias if the module's namespace is not top-level."
@@ -447,6 +460,10 @@
       {
         "name": "nodes_threshold",
         "description": "The number of nodes that need to be found to raise an issue."
+      },
+      {
+        "name": "excluded_macros",
+        "description": "List of macros to be excluded for this check."
       }
     ],
     "description": "Code should not be copy-pasted in a codebase when there is room to abstract the copied functionality in a meaningful way."
