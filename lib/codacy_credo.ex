@@ -12,7 +12,7 @@ defmodule Codacy.Credo do
     |> Config.extract_credo_config()
     |> run()
 
-    System.stop(1)
+    System.stop(0)
 
     {:ok, self()}
   end
