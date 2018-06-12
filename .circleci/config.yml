@@ -5,6 +5,15 @@ jobs:
     working_directory: ~/workdir
     steps:
       - checkout
+      - run:
+          name: Get dependencies
+          command: mix deps.get
+      - run:
+          name: Compile dependencies
+          command: mix deps.compile
+      - run:
+          name: Run tools native tests
+          command: mix test
       - run: 
           name: Clone test project
           working_directory: ~/
