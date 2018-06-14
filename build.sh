@@ -2,7 +2,7 @@
 
 set -e
 
-elixir_version=`cat .elixir-version`
+elixir_version=$(cat .elixir-version)
 echo "elixir version: $elixir_version"
 
 docker_name=$1
