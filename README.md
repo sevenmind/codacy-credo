@@ -1,5 +1,7 @@
 # Codacy Credo
 
+[![CircleCI](https://circleci.com/gh/codacy/codacy-credo.svg?style=svg)](https://circleci.com/gh/codacy/codacy-credo)
+
 Tooling & Docker Definition for running [Credo](https://github.com/rrrene/credo) on [Codacy](https://codacy.com)
 
 ## Usage
