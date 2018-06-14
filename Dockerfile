@@ -1,5 +1,6 @@
 ARG elixir_version
 FROM bitwalker/alpine-elixir:${elixir_version} as builder
+MAINTAINER Codacy <team@codacy.com>
 ENV MIX_ENV=prod
 WORKDIR /tmp/build
 ADD . /tmp/build
@@ -10,6 +11,7 @@ RUN mix deps.compile
 RUN mix release
 
 FROM alpine:3.7
+MAINTAINER Codacy <team@codacy.com>
 RUN apk add --update openssl bash && \
     rm -rf /var/cache/*/*
 # Copy Codacy Docs
