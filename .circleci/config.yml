@@ -1,10 +1,14 @@
 version: 2
 jobs:
-  build:
-    machine: true
-    working_directory: ~/workdir
+  unit_test:
+    docker:  # run the steps with Docker
+      - image: circleci/elixir:1.6.5
+    working_directory: ~/codacy-credo
     steps:
       - checkout
+      - run:
+          name: Install Hex locally and fetch copy of rebar
+          command: mix do local.hex --force, local.rebar --force
       - run:
           name: Get dependencies
           command: mix deps.get
@@ -14,25 +18,43 @@ jobs:
       - run:
           name: Run tools native tests
           command: mix test
+
+  publish_local:
+    machine: true
+    working_directory: ~/workdir
+    steps:
+      - checkout
+      - run: 
+          name: Publish tool docker locally
+          command: ./build.sh $CIRCLE_PROJECT_REPONAME latest
+      - run:
+          name: Save docker to file
+          command: |
+            mkdir -p workspace
+            docker save --output workspace/docker.tar $CIRCLE_PROJECT_REPONAME:latest
+      - persist_to_workspace:
+          root: workspace
+          paths:
+            - docker.tar
+
+  plugins_test:
+    machine: true
+    working_directory: ~/
+    steps:
       - run: 
           name: Clone test project
-          working_directory: ~/
           command: |
             (git -C ~/codacy-plugins-test fetch --all && 
               git -C ~/codacy-plugins-test reset --hard origin/master) || 
                 git clone git://github.com/codacy/codacy-plugins-test.git ~/codacy-plugins-test
       - restore_cache:
-          key: dependencies-{{ checksum "build.sbt" }}
+          key: dependencies-{{ checksum "codacy-plugins-test/build.sbt" }}
       - run: 
           name: Compile test project
           working_directory: ~/codacy-plugins-test
           command: sbt compile
-      - run: 
-          name: Publish tool docker locally
-          working_directory: ~/workdir
-          command: ./build.sh $CIRCLE_PROJECT_REPONAME latest
       - save_cache:
-          key: dependencies-{{ checksum "build.sbt" }}
+          key: dependencies-{{ checksum "codacy-plugins-test/build.sbt" }}
           paths:
             - "~/.ivy2"
             - "~/.m2"
@@ -40,9 +62,11 @@ jobs:
             - "~/codacy-plugins-test/target"
             - "~/codacy-plugins-test/project/target"
             - "~/codacy-plugins-test/project/project"
-            - "~/workdir/target"
-            - "~/workdir/project/target"
-            - "~/workdir/project/project"
+      - attach_workspace:
+          at: /tmp/workspace
+      - run:
+          name: Load docker from file
+          command: docker load --input /tmp/workspace/docker.tar
       - run: 
           name: Test json
           working_directory: ~/codacy-plugins-test
@@ -51,6 +75,16 @@ jobs:
           name: Test patterns
           working_directory: ~/codacy-plugins-test
           command: sbt -Dcodacy.tests.noremove=true -Dcodacy.tests.threads=8 "run-main codacy.plugins.DockerTest pattern $CIRCLE_PROJECT_REPONAME:latest"
+
+  publish:
+    machine: true
+    working_directory: ~/workdir
+    steps:
+      - attach_workspace:
+          at: /tmp/workspace
+      - run:
+          name: Load docker from file
+          command: docker load --input /tmp/workspace/docker.tar
       - deploy:
           name: Push application Docker image
           command: |
@@ -65,4 +99,13 @@ workflows:
   version: 2
   build-and-deploy:
     jobs:
-      - build
+      - unit_test
+      - publish_local
+      - plugins_test:
+          requires:
+            - publish_local
+      - publish:
+          requires:
+            - unit_test
+            - publish_local
+            - plugins_test
