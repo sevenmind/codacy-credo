@@ -57,7 +57,6 @@ defmodule CredoSampleModule do
         _ ->
  ##Warning: warning_unused_list_operation
           List.foldr(arr, [], fn(w) ->
- ##Warning: warning_unused_list_operation
             [:this_goes_nowhere, List.to_tuple(w, ",")]
           end)
       end
@@ -112,7 +111,6 @@ end
 
 defmodule CredoSampleModule do
   defp something(bin) do
- ##Warning: warning_unused_list_operation
     for segment <- List.keysort(segment1, 1), segment != "" do
  ##Warning: warning_unused_list_operation
       List.flatten(segment, [:added_to_the_tail])

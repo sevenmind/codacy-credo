@@ -42,10 +42,8 @@ defmodule Codacy.Credo.Generator.PatternsTest do
       check = Credo.Check.Refactor.PipeChainStart
 
       assert [
-               %{
-                 name: "excluded_functions",
-                 default: []
-               }
+               %{default: [], name: "excluded_argument_types"},
+               %{default: [], name: "excluded_functions"}
              ] == Patterns.check_to_parameters({check})
     end
 

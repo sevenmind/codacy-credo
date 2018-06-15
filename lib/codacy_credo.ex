@@ -5,14 +5,14 @@ defmodule Codacy.Credo do
 
   def start(_type, _args) do
     # I'm Just a fancy Script that starts Credo with the prescribed startup settings
-    Credo.start(nil, nil)
+    Credo.Application.start(nil, nil)
 
     "/src/"
     |> Config.load_config()
     |> Config.extract_credo_config()
     |> run()
 
-    System.stop(1)
+    System.stop(0)
 
     {:ok, self()}
   end

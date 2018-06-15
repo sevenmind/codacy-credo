@@ -6,6 +6,7 @@ defmodule Credo.Sample1 do
     @type config_or_func :: Config.t() | (-> Config.t())
 
     def foobar do
+     ##Warning: consistency_space_around_operators
       1+2
     end
   end
@@ -123,6 +124,7 @@ defmodule Credo.Sample1 do
     @type config_or_func :: Config.t() | (-> Config.t())
 
     def foobar do
+     ##Warning: consistency_space_around_operators
       1+2
     end
   end
@@ -150,10 +152,12 @@ end
 
 defmodule OtherModule3 do
   defmacro foo do
+    ##Warning: consistency_space_around_operators
     3+4
   end
 
   defp bar do
+    ##Warning: consistency_space_around_operators
     6 *7
   end
 end
@@ -168,10 +172,12 @@ end
 
 defmodule OtherModule3 do
   defmacro foo do
+       ##Warning: consistency_space_around_operators
     3+4
   end
 
   defp bar do
+       ##Warning: consistency_space_around_operators
     6 *7
   end
 end

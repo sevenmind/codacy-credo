@@ -8,7 +8,7 @@ defmodule Codacy.Credo.Runner do
   def run(exec) do
     exec
     |> load_and_validate_source_files()
-    |> Credo.Check.Runner.prepare_config()
+    |> Credo.CLI.Task.PrepareChecksToRun.call()
     |> run_checks()
     |> determine_success()
   end

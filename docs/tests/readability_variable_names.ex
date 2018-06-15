@@ -58,6 +58,7 @@ end
 defmodule CredoSampleModule do
   def some_function(parameter1, parameter2) do
  ##Warning: readability_variable_names
+ ##Warning: readability_variable_names
     %{some_value: someValue, other_value: otherValue} = parameter1
   end
 end

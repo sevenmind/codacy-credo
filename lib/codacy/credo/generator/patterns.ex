@@ -58,7 +58,10 @@ defmodule Codacy.Credo.Generator.Patterns do
 
   ## Examples
     iex> Codacy.Credo.Generator.Patterns.check_to_parameters({Credo.Check.Refactor.PipeChainStart})
-    [%{name: "excluded_functions", default: []}]
+    [
+      %{default: [], name: "excluded_argument_types"},
+      %{default: [], name: "excluded_functions"}
+    ]
   """
   @spec check_to_parameters(tuple) :: [map]
   def check_to_parameters({check, params}) when params != false do
@@ -103,7 +106,7 @@ defmodule Codacy.Credo.Generator.Patterns do
 
   def check_to_level({_check, [priority: priority]}) do
     priority
-    |> Credo.Check.to_priority()
+    |> Credo.Priority.to_integer()
     |> priority_to_level()
   end
 

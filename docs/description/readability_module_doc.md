@@ -12,10 +12,7 @@ Every module should contain comprehensive documentation.
     # also okay: explicitly say there is no documentation
 
     defmodule MyApp.Web.Search do
-      @moduledoc """
-      This module provides a public API for all search queries originating
-      in the web layer.
-      """
+      @moduledoc false
     end
 
 Many times a sentence or two in plain english, explaining why the module

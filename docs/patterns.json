@@ -1,5 +1,5 @@
 {
-  "version": "0.8.10",
+  "version": "0.9.3",
   "patterns": [
     {
       "patternId": "consistency_exception_names",
@@ -53,6 +53,12 @@
         }
       ],
       "level": "Warning",
+      "category": "CodeStyle"
+    },
+    {
+      "patternId": "readability_alias_order",
+      "parameters": [],
+      "level": "Info",
       "category": "CodeStyle"
     },
     {
@@ -206,7 +212,7 @@
       "parameters": [
         {
           "name": "max_arity",
-          "default": 5
+          "default": 8
         },
         {
           "name": "ignore_defp",
@@ -222,6 +228,10 @@
         {
           "name": "max_line_count",
           "default": 150
+        },
+        {
+          "name": "ignore_comments",
+          "default": false
         }
       ],
       "level": "Warning",
@@ -251,17 +261,6 @@
         {
           "name": "max_nesting",
           "default": 2
-        }
-      ],
-      "level": "Info",
-      "category": "CodeStyle"
-    },
-    {
-      "patternId": "refactor_pipe_chain_start",
-      "parameters": [
-        {
-          "name": "excluded_functions",
-          "default": []
         }
       ],
       "level": "Info",
@@ -544,6 +543,26 @@
       "category": "CodeStyle"
     },
     {
+      "patternId": "refactor_pipe_chain_start",
+      "parameters": [
+        {
+          "name": "excluded_argument_types",
+          "default": [
+            "atom",
+            "binary",
+            "fn",
+            "keyword"
+          ]
+        },
+        {
+          "name": "excluded_functions",
+          "default": []
+        }
+      ],
+      "level": "Info",
+      "category": "CodeStyle"
+    },
+    {
       "patternId": "refactor_variable_rebinding",
       "parameters": [],
       "level": "Info",
@@ -551,30 +570,6 @@
     },
     {
       "patternId": "warning_map_get_unsafe_pass",
-      "parameters": [],
-      "level": "Warning",
-      "category": "ErrorProne"
-    },
-    {
-      "patternId": "warning_name_redeclaration_by_assignment",
-      "parameters": [],
-      "level": "Warning",
-      "category": "ErrorProne"
-    },
-    {
-      "patternId": "warning_name_redeclaration_by_case",
-      "parameters": [],
-      "level": "Warning",
-      "category": "ErrorProne"
-    },
-    {
-      "patternId": "warning_name_redeclaration_by_def",
-      "parameters": [],
-      "level": "Warning",
-      "category": "ErrorProne"
-    },
-    {
-      "patternId": "warning_name_redeclaration_by_fn",
       "parameters": [],
       "level": "Warning",
       "category": "ErrorProne"

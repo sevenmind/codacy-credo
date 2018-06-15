@@ -84,6 +84,7 @@ defmodule CredoSampleModule do
     if issue.column do
       IO.puts "."
     else
+     ##Warning: warning_unused_tuple_operation
       [:this_goes_nowhere, Tuple.to_list(w, ",")] # THIS is not the last_call!
       IO.puts " "
     end

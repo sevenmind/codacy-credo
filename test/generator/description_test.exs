@@ -33,6 +33,10 @@ defmodule Codacy.Credo.Generator.DescriptionTest do
           %{
             description: "The maximum number of lines a quote block should be allowed to have.",
             name: "max_line_count"
+          },
+          %{
+            description: "Ignores comments when counting the lines of a `quote` block.",
+            name: "ignore_comments"
           }
         ],
         patternId: "refactor_long_quote_blocks",

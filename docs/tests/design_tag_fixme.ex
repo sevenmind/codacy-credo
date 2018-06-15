@@ -1,8 +1,9 @@
 ##Patterns: design_tag_fixme
+##Issue: {"severity": "Warning", "line": 7, "patternId": "design_tag_fixme"}
+##Issue: {"severity": "Warning", "line": 16, "patternId": "design_tag_fixme"}
 defmodule CredoSampleModule do
   use ExUnit.Case # TODO: this should not appear in the FIXME test
 
- ##Warning: design_tag_fixme
   # FIXME: this should not appear in the # FIXME test
 
   def some_fun do
@@ -12,7 +13,6 @@ end
 
 defmodule CredoSampleModule do
   def some_fun do
- ##Warning: design_tag_fixme
     # fixme blah blah
     Repo.preload(:comments)
   end

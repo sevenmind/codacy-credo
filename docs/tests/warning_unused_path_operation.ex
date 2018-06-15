@@ -68,7 +68,6 @@ defmodule CredoSampleModule do
         _ ->
  ##Warning: warning_unused_path_operation
           Path.reduce(arr, fn(w) ->
- ##Warning: warning_unused_path_operation
             [:this_goes_nowhere, Path.join(w, ",")]
           end)
       end

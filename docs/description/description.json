@@ -24,7 +24,12 @@
     "title": "Consistency Space Around Operators",
     "timeToFix": 5,
     "patternId": "consistency_space_around_operators",
-    "parameters": [],
+    "parameters": [
+      {
+        "name": "ignore",
+        "description": "List of operators to be ignored for this check."
+      }
+    ],
     "description": "Use spaces around operators like `+`, `-`, `*` and `/`. This is the **preferred** way, although other styles are possible, as long as it is applied consistently."
   },
   {
@@ -52,6 +57,13 @@
       }
     ],
     "description": "FIXME comments are used to indicate places where source code needs fixing."
+  },
+  {
+    "title": "Readability Alias Order",
+    "timeToFix": 5,
+    "patternId": "readability_alias_order",
+    "parameters": [],
+    "description": "Alphabetically ordered lists are more easily scannable by the read."
   },
   {
     "title": "Readability Function Names",
@@ -240,6 +252,10 @@
       {
         "name": "max_line_count",
         "description": "The maximum number of lines a quote block should be allowed to have."
+      },
+      {
+        "name": "ignore_comments",
+        "description": "Ignores comments when counting the lines of a `quote` block."
       }
     ],
     "description": "Long `quote` blocks are generally an indication that too much is done inside them."
@@ -276,13 +292,6 @@
       }
     ],
     "description": "Code should not be nested more than once inside a function."
-  },
-  {
-    "title": "Refactor Pipe Chain Start",
-    "timeToFix": 5,
-    "patternId": "refactor_pipe_chain_start",
-    "parameters": [],
-    "description": "Pipes (`|>`) can become more readable by starting with a \"raw\" value."
   },
   {
     "title": "Refactor Unless With Else",
@@ -427,6 +436,14 @@
       {
         "name": "if_called_more_often_than",
         "description": "Only raise an issue if a module is called more often than this."
+      },
+      {
+        "name": "excluded_namespaces",
+        "description": "List of namespaces to be excluded for this check."
+      },
+      {
+        "name": "excluded_lastnames",
+        "description": "List of lastnames to be excluded for this check."
       }
     ],
     "description": "Functions from other modules should be used via an alias if the module's namespace is not top-level."
@@ -443,6 +460,10 @@
       {
         "name": "nodes_threshold",
         "description": "The number of nodes that need to be found to raise an issue."
+      },
+      {
+        "name": "excluded_macros",
+        "description": "List of macros to be excluded for this check."
       }
     ],
     "description": "Code should not be copy-pasted in a codebase when there is room to abstract the copied functionality in a meaningful way."
@@ -510,6 +531,22 @@
     "description": "When building up large lists, it is faster to prepend than append. Therefore: It is sometimes best to prepend to the list during iteration and call Enum.reverse/1 at the end, as it is quite fast."
   },
   {
+    "title": "Refactor Pipe Chain Start",
+    "timeToFix": 5,
+    "patternId": "refactor_pipe_chain_start",
+    "parameters": [
+      {
+        "name": "excluded_functions",
+        "description": "All functions listed will be ignored."
+      },
+      {
+        "name": "excluded_argument_types",
+        "description": "All pipes with argument types listed will be ignored."
+      }
+    ],
+    "description": "Pipes (`|>`) can become more readable by starting with a \"raw\" value."
+  },
+  {
     "title": "Refactor Variable Rebinding",
     "timeToFix": 5,
     "patternId": "refactor_variable_rebinding",
@@ -522,33 +559,5 @@
     "patternId": "warning_map_get_unsafe_pass",
     "parameters": [],
     "description": "`Map.get/2` can lead into runtime errors if the result is passed into a pipe without a proper default value. This happens when the next function in the pipe cannot handle `nil` values correctly."
-  },
-  {
-    "title": "Warning Name Redeclaration By Assignment",
-    "timeToFix": 5,
-    "patternId": "warning_name_redeclaration_by_assignment",
-    "parameters": [],
-    "description": "The names of local variables should not be the same as names of functions or macros in the same module or in `Kernel`."
-  },
-  {
-    "title": "Warning Name Redeclaration By Case",
-    "timeToFix": 5,
-    "patternId": "warning_name_redeclaration_by_case",
-    "parameters": [],
-    "description": "Names assigned to choices in a `case` statement should not be the same as names of functions in the same module or in `Kernel`."
-  },
-  {
-    "title": "Warning Name Redeclaration By Def",
-    "timeToFix": 5,
-    "patternId": "warning_name_redeclaration_by_def",
-    "parameters": [],
-    "description": "Names assigned to parameters of a named function should not be the same as names of functions in the same module or in `Kernel`."
-  },
-  {
-    "title": "Warning Name Redeclaration By Fn",
-    "timeToFix": 5,
-    "patternId": "warning_name_redeclaration_by_fn",
-    "parameters": [],
-    "description": "Names assigned to parameters of an anonymous function should not be the same as names of functions in the same module or in `Kernel`."
   }
 ]

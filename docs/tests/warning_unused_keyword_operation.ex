@@ -57,7 +57,6 @@ defmodule CredoSampleModule do
         _ ->
  ##Warning: warning_unused_keyword_operation
           Keyword.update(arr, [], fn(w) ->
- ##Warning: warning_unused_keyword_operation
             [:this_goes_nowhere, Keyword.values(w, ",")]
           end)
       end

@@ -41,6 +41,7 @@ defmodule Codacy.Credo.Config do
         excluded: [~r"/_build/", ~r"/deps/"]
       },
       strict: true,
+      min_priority: -99,
       checks: extract_checks(codacy)
     }
 

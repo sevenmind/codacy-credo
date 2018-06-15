@@ -1,10 +1,16 @@
 ##Patterns: design_tag_todo
- ##Info: design_tag_todo
+##Issue: {"severity": "Info", "line": 13, "patternId": "design_tag_todo"}
+##Issue: {"severity": "Info", "line": 25, "patternId": "design_tag_todo"} 
+##Issue: {"severity": "Info", "line": 61, "patternId": "design_tag_todo"}
+##Issue: {"severity": "Info", "line": 69, "patternId": "design_tag_todo"}  
+##Issue: {"severity": "Info", "line": 73, "patternId": "design_tag_todo"}  
+##Issue: {"severity": "Info", "line": 77, "patternId": "design_tag_todo"}  
+##Issue: {"severity": "Info", "line": 89, "patternId": "design_tag_todo"}  
+
 defmodule CredoSampleModule do
   use ExUnit.Case # FIXME: this should not appear in the TODO test
 
- ##Info: design_tag_todo
-  # TODO: this should not appear in the # TODO test
+  # TODO: this should appear in the # TODO test
 
   def some_fun do
     assert x == x + 2
@@ -16,7 +22,6 @@ defmodule CredoSampleModule do
   FIXME: this should not appear in the test
   """
 
- ##Info: design_tag_todo
   @doc "TODO: this should yield an issue"
 
   def some_fun do
@@ -53,7 +58,6 @@ end
 defmodule CredoSampleModule do
   use ExUnit.Case # FIXME: this should not appear in the TODO test
 
- ##Info: design_tag_todo
 # TODO: this should appear
 
   def some_fun do
@@ -62,17 +66,14 @@ defmodule CredoSampleModule do
 end
 
 defmodule CredoSampleModule do
- ##Info: design_tag_todo
   #TODO: this should appear
 end
 
 defmodule CredoSampleModule do
- ##Info: design_tag_todo
   #       TODO: this should appear
 end
 
 defmodule CredoSampleModule do
- ##Info: design_tag_todo
   # TODO:         this should appear
 end
 
@@ -85,7 +86,6 @@ end
 
 defmodule CredoSampleModule do
   def some_fun do
- ##Info: design_tag_todo
     # todo blah blah
     Repo.preload(:comments)
   end
