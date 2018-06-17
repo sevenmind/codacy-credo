@@ -7,7 +7,7 @@ defmodule Codacy.Credo do
     # I'm Just a fancy Script that starts Credo with the prescribed startup settings
     Credo.Application.start(nil, nil)
 
-    "/src/"
+    Config.srcPath()
     |> Config.load_config()
     |> Config.extract_credo_config()
     |> run()
