@@ -51,10 +51,23 @@ defmodule Codacy.Credo.Config do
   defp extract_checks(%{tools: tools}) do
     patterns_map = Codacy.Credo.Generator.Patterns.pattern_id_map()
 
+    patterns =
     tools
     |> Enum.find(fn tool -> tool.name == "credo" end)
     |> Map.get(:patterns)
-    |> Enum.map(&transform_pattern_to_check(&1, patterns_map))
+
+    if is_nil(patterns) do
+      srcPath()
+      |> Credo.ConfigFile.read_or_default()
+      |> Map.get(:checks)
+    else
+      patterns
+      |> Enum.map(&transform_pattern_to_check(&1, patterns_map))
+    end
+  end
+
+  def srcPath do
+    "/src/"
   end
 
   defp transform_pattern_to_check(%{patternId: pattern_id, parameters: parameters}, patterns_map)
